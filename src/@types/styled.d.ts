@@ -6,9 +6,12 @@ declare module 'styled-components' {
       primary: string;
       primaryDark: string;
       secondary: string;
-      title: string;
-      subtitle: string;
-      text: string;
+      titleDark: string,
+      subtitleDark: string,
+      textDark: string,
+      titleLight: string,
+      subtitleLight: string,
+      textLight: string,
       placeholder: string;
       backgroundLight: string;
       success: string;
