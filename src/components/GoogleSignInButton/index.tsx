@@ -1,17 +1,16 @@
 import { TouchableOpacityProps, ActivityIndicator } from 'react-native'
-import { Container, Title } from './styles';
+import { Container, Title, ContentContainer } from './styles';
 import { useTheme } from 'styled-components'
-
+import { googleIcon } from '../../assets/svgs'
+import { SvgXml } from 'react-native-svg'
 interface ButtonProps extends TouchableOpacityProps {
     disabled?: boolean;
     loading?: boolean;
-    title: string;
 }
 
-export function PrimaryButton({
+export function GoogleSignInButton({
     disabled,
     loading,
-    title,
     ...rest
 }: ButtonProps) {
 
@@ -28,10 +27,13 @@ export function PrimaryButton({
                 loading ?
                     <ActivityIndicator
                         size='small'
-                        color={theme.colors.backgroundLight}
+                        color={theme.colors.textDark}
                     />
                     :
-                    <Title>{title}</Title>
+                    <ContentContainer>
+                        <SvgXml xml={googleIcon} />
+                        <Title>Entrar com o Google</Title>
+                    </ContentContainer>
             }
         </Container>
     )

@@ -16,7 +16,7 @@ import {
 
 export default function App() {
 
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     OpenSans_300Light,
     OpenSans_400Regular,
     OpenSans_500Medium,
