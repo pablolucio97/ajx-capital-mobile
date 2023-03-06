@@ -1,0 +1,52 @@
+export default {
+    title: 'default',
+    colors: {
+        primary: '#3AC6F4',
+        primaryDark: '#0F153C',
+        secondary: '#38D462',
+        title: '#000000',
+        subtitle: '#000000',
+        text: '#000000',
+        placeholder: '#BEBEBE',
+        background: '#F6F6F6',
+        backgroundLight: '#FFFFFF',
+        success: '#38D462',
+        error: '#FF7474',
+    },
+    fonts:{
+        primary_300: 'OpenSans_300Light',
+        primary_400: 'OpenSans_400Regular',
+        primary_500: 'OpenSans_500Medium',
+        primary_600: 'OpenSans_600SemiBold',
+        primary_700: 'OpenSans_700Bold',
+        primary_800: 'OpenSans_800ExtraBold',
+    },
+    spacings: [
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        56
+    ],
+    sizes:[
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        120
+    ]
+}
