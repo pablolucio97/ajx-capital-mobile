@@ -1,5 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
-import { View } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components'
 import defaultTheme from './src/themes/theme'
@@ -13,6 +11,7 @@ import {
   OpenSans_700Bold,
   OpenSans_800ExtraBold,
 } from '@expo-google-fonts/open-sans'
+import { Routes } from 'routes/routes';
 
 export default function App() {
 
@@ -30,9 +29,7 @@ export default function App() {
   } else {
     return (
       <ThemeProvider theme={defaultTheme}>
-        <View>
-          <StatusBar style="auto" />
-        </View>
+        <Routes />
       </ThemeProvider>
     );
   }

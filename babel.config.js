@@ -14,6 +14,7 @@ module.exports = function(api) {
             themes: './src/themes',
             services: './src/services',
             data: './src/data',
+            routes: './src/routes',
             hooks: './src/hooks',
             contexts: './src/contexts',
             utils: './src/utils',

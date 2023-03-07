@@ -13,6 +13,7 @@
       "hooks/*" : ["hooks/*"],
       "services/*" : ["services/*"],
       "interfaces/*" : ["interfaces/*"],
+      "routes/*" : ["routes/*"],
     }
   }
 }
