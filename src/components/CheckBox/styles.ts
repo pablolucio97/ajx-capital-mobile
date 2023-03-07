@@ -8,5 +8,5 @@ export const Checkbox = styled(CheckBox)`
     height: ${RFValue(32)}px;
     border-radius: 10px;
     background-color: #F9F9F9;
-    border: 1px solid ${({theme}) => theme.colors.placeholder};
+    border: 1px solid  #DADADA;
 `
