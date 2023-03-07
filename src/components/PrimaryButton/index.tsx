@@ -6,11 +6,13 @@ interface ButtonProps extends TouchableOpacityProps {
     disabled?: boolean;
     loading?: boolean;
     title: string;
+    bgColor?: string;
 }
 
 export function PrimaryButton({
     disabled,
     loading,
+    bgColor,
     title,
     ...rest
 }: ButtonProps) {
@@ -23,6 +25,7 @@ export function PrimaryButton({
             activeOpacity={.88}
             disabled={disabled!}
             {...rest}
+            bgColor={bgColor}
         >
             {
                 loading ?
