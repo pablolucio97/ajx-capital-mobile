@@ -1,19 +1,21 @@
+import { useNavigation } from '@react-navigation/native';
+import { PrimaryButton } from 'components/PrimaryButton';
+import { Svg } from 'components/Svg';
 import { Text } from 'components/Text';
 import { StatusBar } from 'expo-status-bar';
 import { ImageBackground } from 'react-native';
+import { logoWithText, xTechLogo } from '../../assets/svgs';
 import {
     Container,
+    FormContainer,
     ImageContainer,
-    Styles,
     LoginContainer,
-    FormContainer
+    Styles
 } from './styles';
-import { Svg } from 'components/Svg'
-import { logoWithText, xTechLogo } from '../../assets/svgs';
-import { PrimaryButton } from 'components/PrimaryButton';
 
 export function InitialScreen() {
 
+    const navigation = useNavigation()
     const imagePath = '../../assets/images/loginBackground.png'
 
     return (
@@ -43,6 +45,7 @@ export function InitialScreen() {
                     <PrimaryButton
                         title='Entrar'
                         style={Styles.buttons}
+                        onPress={() => navigation.navigate('Login' as never)}
                     />
                     <PrimaryButton
                         title='Cadastre-se'

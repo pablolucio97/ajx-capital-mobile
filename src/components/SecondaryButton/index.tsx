@@ -1,13 +1,16 @@
 import { TouchableOpacityProps } from 'react-native'
+import { CSSProperties } from 'styled-components';
 import { Container, Title } from './styles';
 
 interface ButtonProps extends TouchableOpacityProps {
     title: string;
     contentColor?: string;
+    textStyle?: CSSProperties;
 }
 
 export function SecondaryButton({
     contentColor,
+    textStyle,
     title,
     ...rest
 }: ButtonProps) {
@@ -15,10 +18,11 @@ export function SecondaryButton({
     return (
         //@ts-ignore
         <Container
-            activeOpacity={.8}
-            {...rest}
+        activeOpacity={.8}
+        {...rest}
         >
-            <Title contentColor={contentColor}>
+          {/* @ts-ignore */}
+            <Title style={textStyle} contentColor={contentColor}>
                 {title}
             </Title>
         </Container>

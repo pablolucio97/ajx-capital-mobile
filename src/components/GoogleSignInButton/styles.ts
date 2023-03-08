@@ -12,7 +12,7 @@ export const Container = styled.TouchableOpacity<ButtonProps>`
   height: 56px;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.backgroundLight};;
-  elevation: 8;
+  elevation: 2;
   ${({ disabled }) =>
         disabled
             ? css`
