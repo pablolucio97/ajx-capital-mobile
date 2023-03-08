@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { GoogleSignInButton } from 'components/GoogleSignInButton';
 import { HeaderNavigation } from 'components/HeaderNavigation';
 import { InputText } from 'components/InputText';
@@ -20,6 +21,8 @@ import {
 } from './styles';
 
 export function Login() {
+
+    const navigation = useNavigation()
 
     return (
         <Container>
@@ -69,6 +72,7 @@ export function Login() {
                             title='Cadastre-se'
                             textStyle={Styles.registerButton}
                             style={Styles.loginOptionsButtons}
+                            onPress={() => navigation.navigate('Cadastro' as never)}
                         />
                     </LoginOptionsContainer>
                 </ContentContainer>

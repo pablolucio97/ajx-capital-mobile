@@ -46,11 +46,12 @@ export function InitialScreen() {
                         title='Entrar'
                         style={Styles.buttons}
                         onPress={() => navigation.navigate('Login' as never)}
-                    />
+                        />
                     <PrimaryButton
                         title='Cadastre-se'
                         bgColor='#E94739'
                         style={Styles.registerButton}
+                        onPress={() => navigation.navigate('Cadastro' as never)}
                     />
                     <Svg
                         width={48}
