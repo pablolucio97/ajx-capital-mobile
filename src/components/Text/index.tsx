@@ -5,9 +5,12 @@ interface ITextProps extends TextProps {
     content: string;
 }
 
-export function Text({ content }: ITextProps) {
+export function Text({ content, ...rest }: ITextProps) {
     return (
-        <TextEl>
+        //@ts-ignore
+        <TextEl
+            {...rest}
+        >
             {content}
         </TextEl>
     )
