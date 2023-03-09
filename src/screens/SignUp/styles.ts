@@ -64,7 +64,7 @@ export const Styles = StyleSheet.create({
     },
     termsTextFinal: {
         color: '#3AC6F4',
-        marginTop: -24,
+        marginTop: -32,
         marginLeft: '-42%',
         marginBottom: 24
     },

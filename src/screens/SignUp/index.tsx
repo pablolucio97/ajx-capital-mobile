@@ -7,7 +7,7 @@ import { Svg } from 'components/Svg';
 import { Text } from 'components/Text';
 import { StatusBar } from 'expo-status-bar';
 import { logo } from '../../assets/svgs';
-import {Masks} from 'react-native-mask-input'
+import { Masks } from 'react-native-mask-input'
 import {
     CheckContainer,
     Container,
@@ -27,6 +27,7 @@ export function SignUp() {
     const [termsChecked, setTermsChecked] = useState(false)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [birthDate, setBirthDate] = useState('')
     const [phone, setPhone] = useState('')
     const [cpf, setCpf] = useState('')
@@ -92,6 +93,8 @@ export function SignUp() {
                         />
                         <InputText
                             label='Senha (Mínimo 6 caracteres)*'
+                            value={password}
+                            onChangeText={setPassword}
                             secureTextEntry
                         />
                         <CheckContainer>

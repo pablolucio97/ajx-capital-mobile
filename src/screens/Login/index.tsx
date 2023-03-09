@@ -7,6 +7,7 @@ import { SecondaryButton } from 'components/SecondaryButton';
 import { Svg } from 'components/Svg';
 import { Text } from 'components/Text';
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import { Keyboard } from 'react-native';
 import { logo } from '../../assets/svgs';
 import {
@@ -23,6 +24,9 @@ import {
 export function Login() {
 
     const navigation = useNavigation()
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         <Container>
@@ -47,9 +51,13 @@ export function Login() {
                     <FormContainer>
                         <InputText
                             label='E-mail'
+                            value={email}
+                            onChangeText={setEmail}
                         />
                         <InputText
                             label='Senha'
+                            value={password}
+                            onChangeText={setPassword}
                             secureTextEntry
                         />
                         <PrimaryButton
