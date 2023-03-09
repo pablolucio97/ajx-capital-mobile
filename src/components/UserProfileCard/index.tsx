@@ -46,6 +46,10 @@ export function UserProfileCard({
                 showsText
                 textStyle={Styles.progressText}
                 strokeCap='round'
+                formatText={text => text
+                    .toString()
+                    .replace('%', '')
+                    .substring(2)}
             />
         </Container>
     )
