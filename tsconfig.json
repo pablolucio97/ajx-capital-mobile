@@ -5,6 +5,7 @@
     "baseUrl": "./src",
     "paths":{
       "themes/*" : ["themes/*"],
+      "assets/*" : ["assets/*"],
       "components/*" : ["components/*"],
       "screens/*" : ["screens/*"],
       "utils/*" : ["utils/*"],

@@ -5,7 +5,7 @@ export function Routes() {
 
     const isAuthenticated = false
 
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
         return <AppRoutes />
     } else {
         return <AuthRoutes />
