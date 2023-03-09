@@ -1,6 +1,6 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native'
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 export const Container = styled.View`
 width: 100%;
@@ -24,9 +24,9 @@ export const Avatar = styled.Image`
 `
 
 export const Styles = StyleSheet.create({
-  progressText:{
-    color: '#000000',
-    fontSize: 12,
-    fontWeight: 'bold'
-  }
+    progressText: {
+        color: '#000000',
+        fontSize: RFValue(12),
+        fontWeight: 'bold'
+    }
 })

@@ -41,7 +41,7 @@ const logoWithText = `<svg width="264" height="96" viewBox="0 0 264 96" fill="no
 </svg>
 `
 
-const xTechLogo =`<svg width="536" height="426" viewBox="0 0 536 426" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const xTechLogo = `<svg width="536" height="426" viewBox="0 0 536 426" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect width="536" height="426" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -52,4 +52,50 @@ const xTechLogo =`<svg width="536" height="426" viewBox="0 0 536 426" fill="none
 </svg>
 `
 
-export { googleIcon, logo, logoWithText, xTechLogo }
+const logout = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 19.392V7.50298C11 6.81298 10.645 6.17198 10.06 5.80698L6.06 3.30698C4.728 2.47498 3 3.43198 3 5.00298V16.891C3 17.581 3.355 18.222 3.94 18.587L7.94 21.087C9.272 21.92 11 20.962 11 19.392Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 11H21" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 13L21 11L19 9" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 19H15C16.105 19 17 18.105 17 17V16" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 6V5C17 3.895 16.105 3 15 3H5" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const bellNotification = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.50897 18.0027V18.5149C9.50897 19.1754 9.77148 19.8088 10.2387 20.2756C10.7059 20.7425 11.3395 21.0045 12 21.0039V21.0039C12.6606 21.0042 13.2942 20.742 13.7614 20.275C14.2286 19.808 14.491 19.1745 14.491 18.5139V18.0027" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9495 18.0026C19.0838 18.0026 20.0033 17.083 20.0033 15.9487V15.9487C20.0028 15.3725 19.7741 14.82 19.367 14.4121L18.0025 13.0485V8.99884C18.0025 5.68375 15.3151 2.99634 12 2.99634V2.99634C8.68489 2.99634 5.99748 5.68375 5.99748 8.99884V13.0485L4.63291 14.4121C4.22589 14.82 3.9971 15.3725 3.99664 15.9487V15.9487C3.99664 16.4934 4.21303 17.0159 4.5982 17.401C4.98338 17.7862 5.50578 18.0026 6.0505 18.0026H17.9495Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const shield = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.319 10.342L11.171 14.49L8.68201 12.001" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.1 5.92099C16.641 5.72699 14.403 4.74799 12.637 3.23299C12.275 2.92299 11.724 2.92299 11.363 3.23299C9.597 4.74699 7.359 5.72699 4.9 5.92099C4.388 5.96099 4 6.39899 4 6.91199V11.242C4 15.609 7.156 19.704 11.478 20.927C11.817 21.023 12.184 21.023 12.523 20.927C16.844 19.703 20 15.61 20 11.243V6.91299C20 6.39899 19.612 5.96099 19.1 5.92099Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
+
+const info = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.999 8C11.861 8 11.749 8.112 11.75 8.25C11.75 8.388 11.862 8.5 12 8.5C12.138 8.5 12.25 8.388 12.25 8.25C12.25 8.112 12.138 8 11.999 8" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 21V21C7.029 21 3 16.971 3 12V12C3 7.029 7.029 3 12 3V3C16.971 3 21 7.029 21 12V12C21 16.971 16.971 21 12 21Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 12V17" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+const userProfile = `
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.091 8.15901C10.9697 9.03769 10.9697 10.4623 10.091 11.341C9.21231 12.2197 7.78769 12.2197 6.90901 11.341C6.03033 10.4623 6.03033 9.03769 6.90901 8.15901C7.78769 7.28033 9.21231 7.28033 10.091 8.15901" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 18.5V5.541C2 4.414 2.914 3.5 4.041 3.5H20C21.105 3.5 22 4.395 22 5.5V18.5C22 19.605 21.105 20.5 20 20.5H4C2.895 20.5 2 19.605 2 18.5Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 9.5H19" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.4 13.5H15" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.095 16.5C11.92 16.061 11.65 15.667 11.303 15.346V15.346C10.716 14.802 9.94603 14.5 9.14603 14.5H7.85403C7.05403 14.5 6.28403 14.802 5.69703 15.346V15.346C5.35003 15.667 5.08003 16.061 4.90503 16.5" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+export {
+    googleIcon,
+    logo,
+    logoWithText,
+    xTechLogo,
+    logout,
+    bellNotification,
+    info,
+    shield,
+    userProfile
+}

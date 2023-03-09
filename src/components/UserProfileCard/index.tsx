@@ -49,7 +49,8 @@ export function UserProfileCard({
                 formatText={text => text
                     .toString()
                     .replace('%', '')
-                    .substring(2)}
+                    .replace('.', '')
+                }
             />
         </Container>
     )

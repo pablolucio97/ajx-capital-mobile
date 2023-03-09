@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Home } from 'screens/Home'
+import { Profile } from 'screens/Profile'
 
 export function AppRoutes() {
 
@@ -9,7 +9,7 @@ export function AppRoutes() {
     return (
         <NavigationContainer>
             <TabNavigation.Navigator>
-                <TabNavigation.Screen name='Home' component={Home} />
+                <TabNavigation.Screen name='Perfil' component={Profile} />
             </TabNavigation.Navigator>
         </NavigationContainer>
     )
