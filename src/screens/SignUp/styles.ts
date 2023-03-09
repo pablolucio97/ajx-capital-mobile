@@ -13,11 +13,22 @@ background-color: ${({ theme }) => theme.colors.backgroundLight};
 `
 
 export const ContentContainer = styled.ScrollView`
+padding-top: ${RFValue(24)}px;
 `
 
 export const LogoContainer = styled.View`
 align-items: center;
-padding-top: ${RFValue(24)}px;
+`
+
+export const CheckContainer = styled.View`
+width: 100%;
+flex-direction: row;
+align-items: center;
+margin-bottom: ${RFValue(24)}px;
+word-break: word;
+`
+
+export const CheckTextContainer = styled.View`
 `
 
 export const HeaderContainer = styled.View`
@@ -44,5 +55,21 @@ export const Styles = StyleSheet.create({
         marginBottom: RFValue(8),
         textAlign: 'center'
     },
+    acceptTermsText: {
+        color: '#3AC6F4',
+        marginLeft: RFValue(4),
+    },
+    termsText: {
+        marginLeft: RFValue(8)
+    },
+    termsTextFinal: {
+        color: '#3AC6F4',
+        marginTop: -24,
+        marginLeft: '-42%',
+        marginBottom: 24
+    },
+    registerButton: {
+        marginBottom: RFValue(24)
+    }
 })
 

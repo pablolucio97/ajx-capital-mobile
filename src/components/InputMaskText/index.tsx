@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { TextInput } from 'react-native';
-import { MaskedTextInput, MaskedTextInputProps } from 'react-native-mask-text';
+import MaskInput, { MaskInputProps } from 'react-native-mask-input'
 import {
     Container,
     InputMaskFocusedStyle,
@@ -8,7 +8,7 @@ import {
     Label
 } from './styles';
 
-interface ITextInputMask extends MaskedTextInputProps {
+interface ITextInputMask extends MaskInputProps {
     label: string;
 }
 
@@ -25,7 +25,7 @@ export function InputMaskText({ label, ...rest }: ITextInputMask) {
     return (
         <Container>
             <Label>{label}</Label>
-            <MaskedTextInput
+            <MaskInput
                 ref={inputRef}
                 onBlur={() => setFocused(false)}
                 onFocus={() => setFocused(true)}
