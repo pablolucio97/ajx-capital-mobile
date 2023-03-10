@@ -88,6 +88,69 @@ const userProfile = `
 </svg>
 `
 
+const bag = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 28H7.99998C5.70398 28 3.87865 26.0707 4.00665 23.7787L4.82532 9.03733C4.98265 6.21067 7.31998 4 10.1506 4H21.8507C24.6813 4 27.0186 6.21067 27.176 9.03733L27.9946 23.7773C28.1213 26.0707 26.296 28 24 28Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.3333 10.3333C21.3333 13.2786 18.9453 15.6666 16 15.6666C13.0546 15.6666 10.6666 13.2786 10.6666 10.3333" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+const bagActive = `<svg width="96" height="48" viewBox="0 0 96 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="48" rx="24" fill="#3AC6F4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M55.9999 36H39.9999C37.7039 36 35.8786 34.0707 36.0066 31.7787L36.8253 17.0373C36.9826 14.2107 39.3199 12 42.1506 12H53.8506C56.6813 12 59.0186 14.2107 59.1759 17.0373L59.9946 31.7773C60.1213 34.0707 58.2959 36 55.9999 36Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53.3332 18.3333C53.3332 21.2787 50.9452 23.6667 47.9998 23.6667C45.0545 23.6667 42.6665 21.2787 42.6665 18.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const book = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 6.6666C13.0267 3.69327 8.396 3.38794 5.08267 5.7506C4.392 6.2426 4 7.0586 4 7.9066V25.1813C4 26.2133 5.1 26.8119 6.01067 26.3266C9.22 24.6159 13.296 25.1133 16 27.8186V6.6666C18.9733 3.69327 23.604 3.38794 26.9173 5.7506C27.608 6.2426 28 7.0586 28 7.9066V25.1813C28 26.2133 26.9 26.8133 25.9893 26.3266C22.78 24.6159 18.704 25.1133 16 27.8186" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const bookActive = `<svg width="96" height="48" viewBox="0 0 96 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="48" rx="24" fill="#3AC6F4"/>
+<path d="M48 14.6667C45.0267 11.6933 40.396 11.388 37.0827 13.7507C36.392 14.2427 36 15.0587 36 15.9067V33.1813C36 34.2133 37.1 34.812 38.0107 34.3267C41.22 32.616 45.296 33.1133 48 35.8187V14.6667C50.9733 11.6933 55.604 11.388 58.9173 13.7507C59.608 14.2427 60 15.0587 60 15.9067V33.1813C60 34.2133 58.9 34.8133 57.9893 34.3267C54.78 32.616 50.704 33.1133 48 35.8187" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const plus = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.3333 4H17.3333C15.1242 4 13.3333 5.79086 13.3333 8V20" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 12.6665V19.9998C28 22.209 26.2091 23.9998 24 23.9998H18.1967" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 21.3333L7.40073 15.6654C7.79213 15.0131 8.36144 14.4859 9.04187 14.1457L9.82213 13.7555C10.3775 13.4778 10.99 13.3333 11.6109 13.3333H13.3333" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.6667 29.3333L14.4113 27.9016C15.4448 27.5064 16.3298 26.7995 16.9437 25.879L20.9644 19.8498C21.5448 18.9794 21.4301 17.8204 20.6904 17.0807V17.0807C19.8336 16.2239 18.4445 16.2237 17.5875 17.0804L14.6667 20H12" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.0016 8.66659L26.0005 3.33325" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.6666 6.00143L23.3333 6.00036" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const plusActive = `
+<svg width="96" height="48" viewBox="0 0 96 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="48" rx="24" fill="#3AC6F4"/>
+<path d="M51.3333 12H49.3333C47.1241 12 45.3333 13.7909 45.3333 16V28" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 20.6667V28C60 30.2091 58.2092 32 56 32H50.1968" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 29.3333L39.4007 23.6655C39.7921 23.0131 40.3614 22.4859 41.0419 22.1457L41.8221 21.7556C42.3775 21.4779 42.99 21.3333 43.6109 21.3333H45.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.6667 37.3333L46.4113 35.9016C47.4449 35.5064 48.3299 34.7996 48.9438 33.879L52.9645 27.8498C53.5449 26.9795 53.4302 25.8204 52.6905 25.0807V25.0807C51.8337 24.2239 50.4445 24.2238 49.5875 25.0804L46.6667 28H44.0001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M58.0017 16.6667L58.0006 11.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60.6666 14.0016L55.3333 14.0005" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const save = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15.3333" cy="8.66667" r="4.66667" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.9733 9.14534C20.4082 9.03929 20.8232 8.86418 21.2026 8.62667C21.8375 8.21658 22.5775 7.99894 23.3333 8H24.6666V11.4053C25.6373 12.271 26.3817 13.3609 26.8349 14.58H28C28.7364 14.58 29.3333 15.177 29.3333 15.9133V20C29.3333 20.7364 28.7364 21.3333 28 21.3333H26.2523C25.55 22.5444 24.5438 23.5513 23.3333 24.2547V26.6667C23.3333 27.4031 22.7364 28 22 28H19.3333C18.5969 28 18 27.4031 18 26.6667V25.3333H13.3333V26.4907C13.3333 27.2271 12.7364 27.824 12 27.824H9.33332C8.59694 27.824 7.99998 27.2271 7.99998 26.4907V23.2842C5.87507 21.3866 4.92193 18.5008 5.49868 15.711C6.07543 12.9211 8.0947 10.6498 10.7978 9.75032" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.05065 13.3333C2.33579 13.7584 1.93017 14.5576 2.00906 15.3856C2.17288 16.53 3.1705 17.3686 4.32606 17.3333H5.33331" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.6714 15.9952V16.0046H22.6619V15.9952H22.6714" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const saveActive = `<svg width="96" height="48" viewBox="0 0 96 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="48" rx="24" fill="#3AC6F4"/>
+<circle cx="47.3334" cy="16.6667" r="4.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M51.9733 17.1453C52.4082 17.0393 52.8232 16.8642 53.2026 16.6267C53.8375 16.2166 54.5775 15.9989 55.3333 16H56.6666V19.4053C57.6373 20.271 58.3817 21.3609 58.8349 22.58H60C60.7364 22.58 61.3333 23.177 61.3333 23.9133V28C61.3333 28.7364 60.7364 29.3333 60 29.3333H58.2523C57.55 30.5444 56.5438 31.5513 55.3333 32.2547V34.6667C55.3333 35.4031 54.7364 36 54 36H51.3333C50.5969 36 50 35.4031 50 34.6667V33.3333H45.3333V34.4907C45.3333 35.2271 44.7364 35.824 44 35.824H41.3333C40.5969 35.824 40 35.2271 40 34.4907V31.2842C37.8751 29.3866 36.9219 26.5008 37.4987 23.711C38.0754 20.9211 40.0947 18.6498 42.7978 17.7503" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.0507 21.3333C34.3358 21.7585 33.9302 22.5577 34.0091 23.3857C34.1729 24.5301 35.1706 25.3687 36.3261 25.3333H37.3334" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.6714 23.9953V24.0047H54.6619V23.9953H54.6714" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+`
+
 export {
     googleIcon,
     logo,
@@ -97,5 +160,13 @@ export {
     bellNotification,
     info,
     shield,
-    userProfile
+    userProfile,
+    bag,
+    bagActive,
+    book,
+    bookActive,
+    plus,
+    plusActive,
+    save,
+    saveActive,
 }
