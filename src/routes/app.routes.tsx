@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 import { AvatarIcon } from 'components/AvatarIcon'
 import { SvgXml } from 'react-native-svg'
 import { Content } from 'screens/Content'
@@ -7,6 +8,7 @@ import { Home } from 'screens/Home'
 import { NewOpportunities } from 'screens/NewOpportunities'
 import { Profile } from 'screens/Profile'
 import { Promotions } from 'screens/Promotions'
+import { MyData } from 'screens/MyData'
 import { useTheme } from 'styled-components'
 import {
     bag,
@@ -22,7 +24,8 @@ import {
 export function AppRoutes() {
 
     const theme = useTheme()
-    const TabNavigation = createBottomTabNavigator()
+    const TabNavigator = createBottomTabNavigator()
+    const StackNavigator = createStackNavigator()
 
     const AvatarIconImage = 'https://images.unsplash.com/photo-1553514029-1318c9127859?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80'
 
@@ -37,6 +40,20 @@ export function AppRoutes() {
         tabBarLabelStyle: {
             display: 'none',
         },
+    }
+
+    function RenderStackNavigator() {
+        return (
+            <StackNavigator.Navigator 
+            initialRouteName='Meus Dados'
+            screenOptions={{
+                headerShown: false
+            }}
+            >
+                <StackNavigator.Screen name='Detalhes Perfil' component={Profile} />
+                <StackNavigator.Screen name='Meus Dados' component={MyData} />
+            </StackNavigator.Navigator>
+        )
     }
 
     const screens = [
@@ -62,14 +79,16 @@ export function AppRoutes() {
         },
         {
             name: 'Perfil',
-            component: Profile,
+            component: RenderStackNavigator,
             options: screensConfig
-        },
+        }
     ]
+
+
 
     return (
         <NavigationContainer>
-            <TabNavigation.Navigator initialRouteName='Home'
+            <TabNavigator.Navigator initialRouteName='Home'
                 screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused }) => {
                         let currentElement;
@@ -99,7 +118,7 @@ export function AppRoutes() {
                 )}
             >
                 {screens.map(screen => (
-                    <TabNavigation.Screen
+                    <TabNavigator.Screen
                         key={screen.name}
                         name={screen.name}
                         component={screen.component}
@@ -107,7 +126,7 @@ export function AppRoutes() {
                         options={screen.options}
                     />
                 ))}
-            </TabNavigation.Navigator>
+            </TabNavigator.Navigator>
         </NavigationContainer>
     )
 }
