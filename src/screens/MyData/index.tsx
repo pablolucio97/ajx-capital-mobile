@@ -1,5 +1,6 @@
 import { InputMaskText } from 'components/InputMaskText';
 import { InputText } from 'components/InputText';
+import { ScreenTitle } from 'components/ScreenTitle';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Masks } from 'react-native-mask-input';
@@ -25,6 +26,9 @@ export function MyData() {
         <Container>
             <StatusBar style="dark" />
             <HeaderContainer>
+                <ScreenTitle
+                    pageTitle='Meus dados'
+                />
             </HeaderContainer>
             <TouchableContainer>
                 <ContentContainer

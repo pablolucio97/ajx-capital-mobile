@@ -24,6 +24,7 @@ export const HeaderContainer = styled.View`
 align-items: center;
 padding: ${RFValue(24)}px;
 padding-bottom: 0;
+margin: ${RFValue(24)}px 0;
 `
 
 export const FormContainer = styled.View`
