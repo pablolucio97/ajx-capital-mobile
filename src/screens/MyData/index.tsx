@@ -1,3 +1,4 @@
+import { FormTitleProgress } from 'components/FormTitleProgress';
 import { InputMaskText } from 'components/InputMaskText';
 import { InputText } from 'components/InputText';
 import { ScreenTitle } from 'components/ScreenTitle';
@@ -8,7 +9,7 @@ import { rgMask } from 'utils/masks';
 import {
     Container,
     ContentContainer,
-    FormContainer, HeaderContainer, TouchableContainer
+    FormContainer, HeaderContainer, TitleContainer, TouchableContainer
 } from './styles';
 
 export function MyData() {
@@ -34,6 +35,12 @@ export function MyData() {
                 <ContentContainer
                     showsVerticalScrollIndicator={false}
                 >
+                    <TitleContainer>
+                        <FormTitleProgress
+                            formTitle='Dados gerais'
+                            progress={1}
+                        />
+                    </TitleContainer>
                     <FormContainer>
                         <InputText
                             label='Nome Completo'

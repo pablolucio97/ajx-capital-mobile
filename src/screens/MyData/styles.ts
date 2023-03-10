@@ -16,6 +16,9 @@ export const ContentContainer = styled.ScrollView`
 padding-top: ${RFValue(24)}px;
 `
 
+export const TitleContainer = styled.View`
+padding: 0 ${RFValue(24)}px;
+`
 export const LogoContainer = styled.View`
 align-items: center;
 `
