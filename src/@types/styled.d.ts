@@ -13,6 +13,7 @@ declare module 'styled-components' {
       subtitleLight: string,
       textLight: string,
       placeholder: string;
+      background: string;
       backgroundLight: string;
       success: string;
       error: string;

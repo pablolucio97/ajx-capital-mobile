@@ -1,7 +1,16 @@
 import { MenuCard } from 'components/MenuCard';
 import { UserProfileCard } from 'components/UserProfileCard';
 import { StatusBar } from 'expo-status-bar';
-import { Container } from './styles';
+import {
+    Container,
+    Styles,
+    TextContainer,
+    SvgContainer,
+    ContentContainer
+} from './styles';
+import { Text } from 'components/Text'
+import { SvgXml } from 'react-native-svg'
+import { logoOpac } from '../../assets/svgs';
 
 export function Profile() {
 
@@ -10,13 +19,29 @@ export function Profile() {
     return (
         <Container>
             <StatusBar style="dark" />
-            <UserProfileCard
-                userName='Ana Paula Matinezi'
-                userEmail='anamartinezi@gmail.com'
-                userAvatar={avatarImage}
-                progress={.7}
-            />
-            <MenuCard />
+            <ContentContainer
+                showsVerticalScrollIndicator={false}
+            >
+                <UserProfileCard
+                    userName='Ana Paula Matinezi'
+                    userEmail='anamartinezi@gmail.com'
+                    userAvatar={avatarImage}
+                    progress={.7}
+                    style={Styles.userProfileCard}
+                />
+                <MenuCard />
+                <TextContainer>
+                    <Text
+                        content='Integer augue elit, lacinia ac volutpat eget, tristique eget nunc. Mauris non purus molestie, efficitur odio euismod, egestas sapien.'
+                        style={Styles.text}
+                    />
+                    <SvgContainer>
+                        <SvgXml
+                            xml={logoOpac}
+                        />
+                    </SvgContainer>
+                </TextContainer>
+            </ContentContainer>
         </Container>
     )
 }
