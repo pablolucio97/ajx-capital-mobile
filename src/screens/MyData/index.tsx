@@ -1,10 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigation } from '@react-navigation/native';
 import { FormTitleProgress } from 'components/FormTitleProgress';
 import { ScreenTitle } from 'components/ScreenTitle';
 import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormStepOne } from './FormStepOne';
+import { FormStepTwo } from './FormStepTwo';
 import {
     Container,
     ContentContainer,
@@ -18,6 +20,7 @@ export function MyData() {
     const navigation = useNavigation()
 
     const [registrationProgress, setRegistrationProgress] = useState(1)
+    const [formTitle, setFormTitle] = useState('Dados Gerais')
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [birthDate, setBirthDate] = useState('')
@@ -26,6 +29,11 @@ export function MyData() {
     const [rg, setRg] = useState('')
     const [civilState, setCivilState] = useState('')
     const [gender, setGender] = useState('')
+    const [cep, setCep] = useState('')
+    const [city, setCity] = useState('')
+    const [residenceNumber, setResidenceNumber] = useState('')
+    const [neighborhood, setNeighborhood] = useState('')
+    const [street, setStreet] = useState('')
 
 
     async function handleSave() {
@@ -41,15 +49,43 @@ export function MyData() {
         })
     }
 
-    async function handlePrevious() {
+    function handlePrevious() {
         registrationProgress === 1 ?
             navigation.navigate('Detalhes Perfil' as never) :
             setRegistrationProgress(registrationProgress - 1)
     }
 
-    async function handleNext() {
+    function handleNext() {
         setRegistrationProgress(registrationProgress + 1)
     }
+
+    function updateFormTitle() {
+        switch (registrationProgress) {
+            case 1:
+                setFormTitle('Dados Gerais')
+                break;
+            case 2:
+                setFormTitle('Endereço')
+                break
+            case 3:
+                setFormTitle('Profissão')
+                break
+            case 4:
+                setFormTitle('Dados bancários')
+                break
+            case 5:
+                setFormTitle('Perfil de Investimento')
+                break
+            case 6:
+                setFormTitle('Documentos')
+                break
+            default: 'Dados Gerais'
+        }
+    }
+
+    useEffect(() => {
+        updateFormTitle()
+    }, [registrationProgress])
 
     return (
 
@@ -66,8 +102,8 @@ export function MyData() {
                 >
                     <TitleContainer>
                         <FormTitleProgress
-                            formTitle='Dados gerais'
-                            progress={1}
+                            formTitle={formTitle}
+                            progress={registrationProgress}
                         />
                     </TitleContainer>
                     {
@@ -87,6 +123,22 @@ export function MyData() {
                             setPhone={setPhone}
                             setCivilState={setCivilState}
                             setGender={setGender}
+                        />
+                    }
+                    {
+                        registrationProgress === 2 &&
+                        <FormStepTwo
+                            cep={cep}
+                            city={city}
+                            neighborhood={neighborhood}
+                            residenceNumber={residenceNumber}
+                            setCep={setCep}
+                            setCity={setCity}
+                            setNeighborhood={setNeighborhood}
+                            setResidenceNumber={setResidenceNumber}
+                            setStreet={setStreet}
+                            street={street}
+
                         />
                     }
                     <StepController
