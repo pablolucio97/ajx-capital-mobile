@@ -3,6 +3,7 @@ import { InputMaskText } from 'components/InputMaskText';
 import { InputText } from 'components/InputText';
 import { ScreenTitle } from 'components/ScreenTitle';
 import { SelectPicker } from 'components/SelectPicker';
+import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Masks } from 'react-native-mask-input';
@@ -99,6 +100,11 @@ export function MyData() {
                             value={phone}
                             onChangeText={setPhone}
                             keyboardType='numeric'
+                        />
+                        <StepController
+                            nextAction={() => { }}
+                            previousAction={() => { }}
+                            save={() => { }}
                         />
                     </FormContainer>
                 </ContentContainer>

@@ -23,13 +23,17 @@ export const FocusedStyle = {
 export const Style = StyleSheet.create({
     buttonTextStyle:{
         color: theme.colors.textDark,
-        fontWeight: '300'
+        fontSize: RFValue(14),
+        fontWeight: '300',
+        textAlign: 'left'
     },
     dropdownStyle:{
         backgroundColor: theme.colors.backgroundLight,
         alignSelf: 'center',
+        textAlign: 'center',
         borderRadius: RFValue(10),
-        fontWeight: '300',
+        padding: RFValue(24),
+        minHeight: 220
     },
     buttonStyle:{
         width: '100%',
@@ -37,6 +41,10 @@ export const Style = StyleSheet.create({
         borderRadius: RFValue(10),
         borderWidth: 1,
         borderColor: theme.colors.background,
-        marginBottom: RFValue(24)
+        marginBottom: RFValue(24),
+    },
+    rowStyle:{
+        textAlign: 'center',
+        color: 'red'
     }
 })
