@@ -2,14 +2,19 @@ import { FormTitleProgress } from 'components/FormTitleProgress';
 import { InputMaskText } from 'components/InputMaskText';
 import { InputText } from 'components/InputText';
 import { ScreenTitle } from 'components/ScreenTitle';
+import { SelectPicker } from 'components/SelectPicker';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Masks } from 'react-native-mask-input';
 import { rgMask } from 'utils/masks';
+import { countries, genders } from 'utils/mockedData';
 import {
     Container,
     ContentContainer,
-    FormContainer, HeaderContainer, TitleContainer, TouchableContainer
+    FormContainer,
+    HeaderContainer,
+    TitleContainer,
+    TouchableContainer
 } from './styles';
 
 export function MyData() {
@@ -20,7 +25,6 @@ export function MyData() {
     const [phone, setPhone] = useState('')
     const [cpf, setCpf] = useState('')
     const [rg, setRg] = useState('')
-
 
     return (
 
@@ -67,6 +71,22 @@ export function MyData() {
                             value={rg}
                             onChangeText={setRg}
                             keyboardType='numeric'
+                        />
+                        <SelectPicker
+                            label='Estado Civil'
+                            defaultButtonText='Selecione uma opção'
+                            data={countries}
+                            onSelect={(selectedItem, index) => {
+                                console.log(selectedItem, index)
+                            }}
+                        />
+                        <SelectPicker
+                            label='Gênero'
+                            defaultButtonText='Selecione uma opção'
+                            data={genders}
+                            onSelect={(selectedItem, index) => {
+                                console.log(selectedItem, index)
+                            }}
                         />
                         <InputText
                             label='E-mail'
