@@ -45,7 +45,7 @@ export function AppRoutes() {
     function RenderStackNavigator() {
         return (
             <StackNavigator.Navigator 
-            initialRouteName='Meus Dados'
+            initialRouteName='Detalhes Perfil'
             screenOptions={{
                 headerShown: false
             }}

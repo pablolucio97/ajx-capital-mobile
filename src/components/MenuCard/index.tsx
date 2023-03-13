@@ -18,13 +18,19 @@ import {
     userProfile
 } from '../../assets/svgs'
 import { SvgXml } from 'react-native-svg'
+import { useNavigation } from '@react-navigation/native';
 
 export function MenuCard() {
+
+    const navigation = useNavigation()
 
 
     const data = [
         { icon: bellNotification, content: 'Notifcações', hasUpdates: true, onPress: () => { } },
-        { icon: userProfile, content: 'Meus Dados', hasUpdates: true, onPress: () => { } },
+        {
+            icon: userProfile, content: 'Meus Dados', hasUpdates: true,
+            onPress: () => navigation.navigate('Meus Dados' as never)
+        },
         { icon: shield, content: 'Segurança', hasUpdates: false, onPress: () => { } },
         { icon: info, content: 'FAQ', hasUpdates: false, onPress: () => { } },
         { icon: logout, content: 'Sair', hasUpdates: false, onPress: () => { } },

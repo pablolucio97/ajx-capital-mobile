@@ -24,7 +24,7 @@ export const Style = StyleSheet.create({
     buttonTextStyle:{
         color: theme.colors.textDark,
         fontSize: RFValue(14),
-        fontWeight: '300',
+        fontFamily: theme.fonts.primary_300
     },
     dropdownStyle:{
         backgroundColor: theme.colors.backgroundLight,

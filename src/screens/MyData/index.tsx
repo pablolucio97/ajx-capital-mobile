@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { FormTitleProgress } from 'components/FormTitleProgress';
 import { ScreenTitle } from 'components/ScreenTitle';
 import { StepController } from 'components/StepController';
@@ -13,6 +14,8 @@ import {
 } from './styles';
 
 export function MyData() {
+
+    const navigation = useNavigation()
 
     const [registrationProgress, setRegistrationProgress] = useState(1)
     const [name, setName] = useState('')
@@ -39,13 +42,13 @@ export function MyData() {
     }
 
     async function handlePrevious() {
-        setRegistrationProgress(registrationProgress - 1)
-        console.log(registrationProgress)
+        registrationProgress === 1 ?
+            navigation.navigate('Detalhes Perfil' as never) :
+            setRegistrationProgress(registrationProgress - 1)
     }
 
     async function handleNext() {
         setRegistrationProgress(registrationProgress + 1)
-        console.log(registrationProgress)
     }
 
     return (
@@ -90,6 +93,7 @@ export function MyData() {
                         nextAction={handleNext}
                         previousAction={handlePrevious}
                         save={handleSave}
+                        disabledPreviousButton={registrationProgress <= 0}
                     />
                 </ContentContainer>
             </TouchableContainer>

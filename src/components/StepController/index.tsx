@@ -6,23 +6,32 @@ interface StepControllerProps {
     previousAction: () => void;
     save: () => void;
     nextAction: () => void;
+    disabledPreviousButton?: boolean;
+    disabledNextButton?: boolean;
 }
 
 export function StepController({
     previousAction,
     save,
-    nextAction
+    nextAction,
+    disabledPreviousButton,
+    disabledNextButton
 }: StepControllerProps) {
     return (
         <Container>
             <Button
                 onPress={previousAction}
+                disabled={disabledPreviousButton}
+                style={disabledPreviousButton ? Styles.disabled : null}
             >
-                <SvgXml
-                    xml={leftArrow}
-                />
+                {
+                    !disabledPreviousButton &&
+                    <SvgXml
+                        xml={leftArrow}
+                    />
+                }
                 <ButtonText
-                    style={Styles.textLeft}
+                    style={disabledPreviousButton ? Styles.disabled : Styles.textLeft}
                 >
                     Anterior
                 </ButtonText>
@@ -34,15 +43,19 @@ export function StepController({
             </Button>
             <Button
                 onPress={nextAction}
+                disabled={disabledNextButton}
             >
                 <ButtonText
                     style={Styles.textRight}
                 >
                     Próximo
                 </ButtonText>
-                <SvgXml
-                    xml={rightArrow}
-                />
+                {
+                    !disabledNextButton &&
+                    <SvgXml
+                        xml={rightArrow}
+                    />
+                }
             </Button>
         </Container>
     )
