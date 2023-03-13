@@ -5,6 +5,7 @@ import { ScreenTitle } from 'components/ScreenTitle';
 import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
+import { FormStepFour } from './FormStepFour';
 import { FormStepOne } from './FormStepOne';
 import { FormStepThree } from './FormStepThree';
 import { FormStepTwo } from './FormStepTwo';
@@ -38,6 +39,9 @@ export function MyData() {
     const [occupation, setOccupation] = useState('')
     const [enterpriseName, setEnterpriseName] = useState('')
     const [position, setPosition] = useState('')
+    const [, setBank] = useState('')
+    const [agency, setAgency] = useState('')
+    const [account, setAccount] = useState('')
 
 
     function handlePrevious() {
@@ -119,6 +123,16 @@ export function MyData() {
                         setEnterpriseName={setEnterpriseName}
                         position={position}
                         setPosition={setPosition}
+                    />
+                )
+            case 4:
+                return (
+                    <FormStepFour
+                        setBank={setBank}
+                        agency={agency}
+                        setAgency={setAgency}
+                        account={account}
+                        setAccount={setAccount}
                     />
                 )
             default: 1
