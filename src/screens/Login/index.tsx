@@ -33,7 +33,7 @@ export function Login() {
             <StatusBar style="dark" />
             <HeaderContainer>
                 <HeaderNavigation
-                    title='Login'
+                    title='Entrar'
                     style={Styles.headerNavigation}
                 />
             </HeaderContainer>

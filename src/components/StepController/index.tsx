@@ -4,7 +4,6 @@ import { leftArrow, rightArrow } from '../../assets/svgs';
 
 interface StepControllerProps {
     previousAction: () => void;
-    save: () => void;
     nextAction: () => void;
     disabledPreviousButton?: boolean;
     disabledNextButton?: boolean;
@@ -12,7 +11,6 @@ interface StepControllerProps {
 
 export function StepController({
     previousAction,
-    save,
     nextAction,
     disabledPreviousButton,
     disabledNextButton
@@ -34,11 +32,6 @@ export function StepController({
                     style={disabledPreviousButton ? Styles.disabled : Styles.textLeft}
                 >
                     Anterior
-                </ButtonText>
-            </Button>
-            <Button onPress={save}>
-                <ButtonText>
-                    Salvar
                 </ButtonText>
             </Button>
             <Button

@@ -6,6 +6,7 @@ import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { FormStepOne } from './FormStepOne';
+import { FormStepThree } from './FormStepThree';
 import { FormStepTwo } from './FormStepTwo';
 import {
     Container,
@@ -27,27 +28,17 @@ export function MyData() {
     const [phone, setPhone] = useState('')
     const [cpf, setCpf] = useState('')
     const [rg, setRg] = useState('')
-    const [civilState, setCivilState] = useState('')
-    const [gender, setGender] = useState('')
+    const [, setCivilState] = useState('')
+    const [, setGender] = useState('')
     const [cep, setCep] = useState('')
     const [city, setCity] = useState('')
     const [residenceNumber, setResidenceNumber] = useState('')
     const [neighborhood, setNeighborhood] = useState('')
     const [street, setStreet] = useState('')
+    const [occupation, setOccupation] = useState('')
+    const [enterpriseName, setEnterpriseName] = useState('')
+    const [position, setPosition] = useState('')
 
-
-    async function handleSave() {
-        console.log({
-            name,
-            email,
-            birthDate,
-            phone,
-            cpf,
-            rg,
-            civilState,
-            gender
-        })
-    }
 
     function handlePrevious() {
         registrationProgress === 1 ?
@@ -63,7 +54,7 @@ export function MyData() {
         switch (registrationProgress) {
             case 1:
                 setFormTitle('Dados Gerais')
-                break;
+                break
             case 2:
                 setFormTitle('Endereço')
                 break
@@ -80,6 +71,57 @@ export function MyData() {
                 setFormTitle('Documentos')
                 break
             default: 'Dados Gerais'
+        }
+    }
+
+    function renderForm() {
+        switch (registrationProgress) {
+            case 1:
+                return (
+                    <FormStepOne
+                        name={name}
+                        setName={setName}
+                        email={email}
+                        setEmail={setEmail}
+                        birthDate={birthDate}
+                        setBirthDate={setBirthDate}
+                        cpf={cpf}
+                        setCpf={setCpf}
+                        rg={rg}
+                        setRg={setRg}
+                        phone={phone}
+                        setPhone={setPhone}
+                        setCivilState={setCivilState}
+                        setGender={setGender}
+                    />
+                )
+            case 2:
+                return (
+                    <FormStepTwo
+                        cep={cep}
+                        city={city}
+                        neighborhood={neighborhood}
+                        residenceNumber={residenceNumber}
+                        setCep={setCep}
+                        setCity={setCity}
+                        setNeighborhood={setNeighborhood}
+                        setResidenceNumber={setResidenceNumber}
+                        setStreet={setStreet}
+                        street={street}
+                    />
+                )
+            case 3:
+                return (
+                    <FormStepThree
+                        occupation={occupation}
+                        setOccupation={setOccupation}
+                        enterpriseName={enterpriseName}
+                        setEnterpriseName={setEnterpriseName}
+                        position={position}
+                        setPosition={setPosition}
+                    />
+                )
+            default: 1
         }
     }
 
@@ -106,45 +148,10 @@ export function MyData() {
                             progress={registrationProgress}
                         />
                     </TitleContainer>
-                    {
-                        registrationProgress === 1 &&
-                        <FormStepOne
-                            name={name}
-                            setName={setName}
-                            email={email}
-                            setEmail={setEmail}
-                            birthDate={birthDate}
-                            setBirthDate={setBirthDate}
-                            cpf={cpf}
-                            setCpf={setCpf}
-                            rg={rg}
-                            setRg={setRg}
-                            phone={phone}
-                            setPhone={setPhone}
-                            setCivilState={setCivilState}
-                            setGender={setGender}
-                        />
-                    }
-                    {
-                        registrationProgress === 2 &&
-                        <FormStepTwo
-                            cep={cep}
-                            city={city}
-                            neighborhood={neighborhood}
-                            residenceNumber={residenceNumber}
-                            setCep={setCep}
-                            setCity={setCity}
-                            setNeighborhood={setNeighborhood}
-                            setResidenceNumber={setResidenceNumber}
-                            setStreet={setStreet}
-                            street={street}
-
-                        />
-                    }
+                    {renderForm()}
                     <StepController
                         nextAction={handleNext}
                         previousAction={handlePrevious}
-                        save={handleSave}
                         disabledPreviousButton={registrationProgress <= 0}
                     />
                 </ContentContainer>
