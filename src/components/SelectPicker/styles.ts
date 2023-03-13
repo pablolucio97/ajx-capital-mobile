@@ -25,15 +25,12 @@ export const Style = StyleSheet.create({
         color: theme.colors.textDark,
         fontSize: RFValue(14),
         fontWeight: '300',
-        textAlign: 'left'
     },
     dropdownStyle:{
         backgroundColor: theme.colors.backgroundLight,
         alignSelf: 'center',
         textAlign: 'center',
         borderRadius: RFValue(10),
-        padding: RFValue(24),
-        minHeight: 220
     },
     buttonStyle:{
         width: '100%',
@@ -43,8 +40,4 @@ export const Style = StyleSheet.create({
         borderColor: theme.colors.background,
         marginBottom: RFValue(24),
     },
-    rowStyle:{
-        textAlign: 'center',
-        color: 'red'
-    }
 })

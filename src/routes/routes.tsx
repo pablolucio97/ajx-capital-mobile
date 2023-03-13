@@ -3,7 +3,7 @@ import { AuthRoutes } from './auth.routes'
 
 export function Routes() {
 
-    const isAuthenticated = false
+    const isAuthenticated = true
 
     if (!isAuthenticated) {
         return <AppRoutes />
