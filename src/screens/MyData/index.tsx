@@ -5,6 +5,7 @@ import { ScreenTitle } from 'components/ScreenTitle';
 import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
+import { FormStepFive } from './FormStepFive';
 import { FormStepFour } from './FormStepFour';
 import { FormStepOne } from './FormStepOne';
 import { FormStepThree } from './FormStepThree';
@@ -42,6 +43,11 @@ export function MyData() {
     const [, setBank] = useState('')
     const [agency, setAgency] = useState('')
     const [account, setAccount] = useState('')
+    const [, setBestProfileStituation] = useState('')
+    const [, setMainSegmentToInvest] = useState('')
+    const [, setPatrimonyToInvest] = useState('')
+    const [monthlyIncome, setMonthlyIncome] = useState('')
+    const [totalPatrimony, setTotalPatrimony] = useState('')
 
 
     function handlePrevious() {
@@ -133,6 +139,18 @@ export function MyData() {
                         setAgency={setAgency}
                         account={account}
                         setAccount={setAccount}
+                    />
+                )
+            case 5:
+                return (
+                    <FormStepFive
+                        monthlyIncome={monthlyIncome}
+                        setBestProfileStituation={setBestProfileStituation}
+                        setMainSegmentToInvest={setMainSegmentToInvest}
+                        setMonthlyIncome={setMonthlyIncome}
+                        setPatrimonyToInvest={setPatrimonyToInvest}
+                        setTotalPatrimony={setTotalPatrimony}
+                        totalPatrimony={totalPatrimony}
                     />
                 )
             default: 1
