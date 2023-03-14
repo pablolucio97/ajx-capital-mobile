@@ -57,11 +57,18 @@ export const DocumentsContainer = styled.View`
 padding: ${RFValue(24)}px;
 `
 
-export const DocumentsList = styled.FlatList`
-padding-bottom: ${RFValue(24)}px;
-
+export const CheckContainer = styled.View`
+flex-direction: row;
+align-items: center;
+margin: ${RFValue(8)}px 0;
 `
 
+export const Subtitle = styled.Text`
+font-size: ${RFValue(14)}px;
+font-family: ${({ theme }) => theme.fonts.primary_400};
+color: ${({ theme }) => theme.colors.textDark};
+margin-left: ${RFValue(8)}px;
+`
 
 export const Styles = StyleSheet.create({
     headerNavigation: {
@@ -72,7 +79,7 @@ export const Styles = StyleSheet.create({
         marginBottom: RFValue(8),
         textAlign: 'center'
     },
-    documentListTitle:{
+    documentListTitle: {
         marginBottom: RFValue(16),
         color: 'red'
     }

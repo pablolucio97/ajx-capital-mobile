@@ -20,7 +20,7 @@ import {
     TouchableContainer
 } from './styles';
 import React, { useState } from 'react';
-import { CheckBox } from 'components/CheckBox';
+import { Checkbox } from 'components/Checkbox';
 
 export function SignUp() {
 
@@ -98,7 +98,7 @@ export function SignUp() {
                             secureTextEntry
                         />
                         <CheckContainer>
-                            <CheckBox
+                            <Checkbox
                                 onValueChange={setTermsChecked}
                                 value={termsChecked}
                             />

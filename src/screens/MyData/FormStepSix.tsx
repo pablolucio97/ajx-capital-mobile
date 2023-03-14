@@ -1,10 +1,8 @@
 import { DocumentCard } from 'components/DocumentCard';
 import { Subtitle } from 'components/Subtitle';
-import { documentImages } from 'utils/mockedData';
 import { IDocument } from 'interfaces/mockedData'
 import {
     DocumentsContainer,
-    DocumentsList,
     FormContainer,
     UploadDocumentButton,
     UploadDocumentButtonText
@@ -12,15 +10,14 @@ import {
 
 interface FormStepSixProps {
     uploadDocument?: () => void;
-    documentList?: string[];
+    documentList?: IDocument[];
 }
 
 export function FormStepSix({
     uploadDocument,
     documentList
 }: FormStepSixProps) {
-
-
+    
     return (
         <>
             <FormContainer>
@@ -37,18 +34,16 @@ export function FormStepSix({
                 <Subtitle
                     content='Documentos Enviados'
                 />
-                <DocumentsList
-                    data={documentImages}
-                    //@ts-ignore
-                    renderItem={({ item }: IDocument) => (
+                {
+                    documentList?.map(item => (
                         <DocumentCard
                             key={item.documentImage}
                             document={item.document}
                             documentImage={item.documentImage}
                             status={item.status}
                         />
-                    )}
-                />
+                    ))
+                }
             </DocumentsContainer>
         </>
     )

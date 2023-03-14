@@ -1,9 +1,7 @@
 interface IDocument {
-    item: {
         document: string;
         documentImage: string;
-        status: 'Pendente Avaliação' | 'Validado';
-    }
+        status: string;
 }
 
 interface IDocuments {

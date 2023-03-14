@@ -44,7 +44,7 @@ const investorProfiles = [
     'Arriscado'
 ]
 
-const documentImages = [
+const documents = [
     {
         document: 'CNH',
         documentImage: 'https://midias.agazeta.com.br/2020/12/14/nova-carteira-de-identidade-vai-fornecer-varias-informacoes-em-um-unico-documento-381900-article.jpg',
@@ -65,5 +65,5 @@ export {
     patrimoniesValuesToInvest,
     segmentsToInvest,
     investorProfiles,
-    documentImages
+    documents
  } 

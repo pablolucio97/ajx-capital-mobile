@@ -1,3 +1,4 @@
+import { Checkbox } from 'components/Checkbox';
 import { InputMaskText } from 'components/InputMaskText';
 import { SelectPicker } from 'components/SelectPicker';
 import React, { Dispatch, SetStateAction } from 'react';
@@ -7,7 +8,7 @@ import {
     patrimoniesValuesToInvest,
     segmentsToInvest
 } from 'utils/mockedData';
-import { FormContainer } from './styles';
+import { CheckContainer, FormContainer, Subtitle } from './styles';
 
 
 interface FormStepFiveProps {
@@ -18,6 +19,10 @@ interface FormStepFiveProps {
     setMonthlyIncome: Dispatch<SetStateAction<string>>;
     totalPatrimony: string;
     setTotalPatrimony: Dispatch<SetStateAction<string>>;
+    isPoliticExposedPeople: boolean;
+    setIsPoliticExposedPeople: Dispatch<SetStateAction<boolean>>;
+    agreeDisplayedAsInvestor: boolean;
+    setAgreeDisplayedAsInvestor: Dispatch<SetStateAction<boolean>>;
 }
 
 export function FormStepFive({
@@ -27,7 +32,11 @@ export function FormStepFive({
     setMonthlyIncome,
     setPatrimonyToInvest,
     setTotalPatrimony,
-    totalPatrimony
+    totalPatrimony,
+    setIsPoliticExposedPeople,
+    isPoliticExposedPeople,
+    agreeDisplayedAsInvestor,
+    setAgreeDisplayedAsInvestor
 }: FormStepFiveProps) {
 
     return (
@@ -70,6 +79,26 @@ export function FormStepFive({
                 onChangeText={setTotalPatrimony}
                 keyboardType='numeric'
             />
+            <CheckContainer>
+                <Checkbox
+                    onValueChange={setIsPoliticExposedPeople}
+                    value={isPoliticExposedPeople}
+                />
+                <Subtitle>
+                    Sou uma pessoa politicamente exposta
+                </Subtitle>
+
+            </CheckContainer>
+            <CheckContainer>
+                <Checkbox
+                    onValueChange={setAgreeDisplayedAsInvestor}
+                    value={agreeDisplayedAsInvestor}
+                />
+                <Subtitle>
+                    Concordo em aparecer como investidor
+                </Subtitle>
+
+            </CheckContainer>
         </FormContainer>
     )
 }

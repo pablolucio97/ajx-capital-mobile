@@ -7,13 +7,15 @@ interface StepControllerProps {
     nextAction: () => void;
     disabledPreviousButton?: boolean;
     disabledNextButton?: boolean;
+    isLastStep?: boolean;
 }
 
 export function StepController({
     previousAction,
     nextAction,
     disabledPreviousButton,
-    disabledNextButton
+    disabledNextButton,
+    isLastStep
 }: StepControllerProps) {
     return (
         <Container>
@@ -38,18 +40,25 @@ export function StepController({
                 onPress={nextAction}
                 disabled={disabledNextButton}
             >
-                <ButtonText
-                    style={Styles.textRight}
-                >
-                    Próximo
-                </ButtonText>
                 {
-                    !disabledNextButton &&
+                    isLastStep ?
+                        <ButtonText>
+                            Salvar
+                        </ButtonText> :
+                        <ButtonText
+                            style={Styles.textRight}
+                        >
+                            Próximo
+                        </ButtonText>
+
+                }
+                {
+                    !isLastStep &&
                     <SvgXml
                         xml={rightArrow}
                     />
                 }
             </Button>
-        </Container>
+        </Container >
     )
 }

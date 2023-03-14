@@ -4,6 +4,8 @@ import { FormTitleProgress } from 'components/FormTitleProgress';
 import { ScreenTitle } from 'components/ScreenTitle';
 import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
+import { documents } from 'utils/mockedData';
+
 import React, { useEffect, useState } from 'react';
 import { FormStepFive } from './FormStepFive';
 import { FormStepFour } from './FormStepFour';
@@ -49,7 +51,12 @@ export function MyData() {
     const [, setPatrimonyToInvest] = useState('')
     const [monthlyIncome, setMonthlyIncome] = useState('')
     const [totalPatrimony, setTotalPatrimony] = useState('')
+    const [isPoliticExposedPeople, setIsPoliticExposedPeople] = useState(false)
+    const [agreeDisplayedAsInvestor, setAgreeDisplayedAsInvestor] = useState(false)
 
+    function handleSave() {
+        setRegistrationProgress(6)
+    }
 
     function handlePrevious() {
         registrationProgress === 1 ?
@@ -58,7 +65,14 @@ export function MyData() {
     }
 
     function handleNext() {
-        setRegistrationProgress(registrationProgress + 1)
+        registrationProgress >= 6 ?
+            handleSave() :
+            setRegistrationProgress(registrationProgress + 1)
+
+    }
+
+    async function handleUploadDocument() {
+        return
     }
 
     function updateFormTitle() {
@@ -152,12 +166,17 @@ export function MyData() {
                         setPatrimonyToInvest={setPatrimonyToInvest}
                         setTotalPatrimony={setTotalPatrimony}
                         totalPatrimony={totalPatrimony}
+                        agreeDisplayedAsInvestor={agreeDisplayedAsInvestor}
+                        isPoliticExposedPeople={isPoliticExposedPeople}
+                        setAgreeDisplayedAsInvestor={setAgreeDisplayedAsInvestor}
+                        setIsPoliticExposedPeople={setIsPoliticExposedPeople}
                     />
                 )
             case 6:
                 return (
                     <FormStepSix
-                    
+                        documentList={documents}
+                        uploadDocument={handleUploadDocument}
                     />
                 )
             default: 1
@@ -192,6 +211,7 @@ export function MyData() {
                         nextAction={handleNext}
                         previousAction={handlePrevious}
                         disabledPreviousButton={registrationProgress <= 0}
+                        isLastStep={registrationProgress >= 6}
                     />
                 </ContentContainer>
             </TouchableContainer>
