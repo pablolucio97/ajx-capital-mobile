@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react';
 import { FormStepFive } from './FormStepFive';
 import { FormStepFour } from './FormStepFour';
 import { FormStepOne } from './FormStepOne';
+import { FormStepSix } from './FormStepSix';
 import { FormStepThree } from './FormStepThree';
 import { FormStepTwo } from './FormStepTwo';
 import {
@@ -151,6 +152,12 @@ export function MyData() {
                         setPatrimonyToInvest={setPatrimonyToInvest}
                         setTotalPatrimony={setTotalPatrimony}
                         totalPatrimony={totalPatrimony}
+                    />
+                )
+            case 6:
+                return (
+                    <FormStepSix
+                    
                     />
                 )
             default: 1

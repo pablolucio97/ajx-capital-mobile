@@ -44,4 +44,26 @@ const investorProfiles = [
     'Arriscado'
 ]
 
-export { countries, genders, banks, patrimoniesValuesToInvest, segmentsToInvest, investorProfiles } 
+const documentImages = [
+    {
+        document: 'CNH',
+        documentImage: 'https://midias.agazeta.com.br/2020/12/14/nova-carteira-de-identidade-vai-fornecer-varias-informacoes-em-um-unico-documento-381900-article.jpg',
+        status: 'Pendente Avaliação'
+    },
+    {
+        document: 'CNH',
+        documentImage: 'https://s2.glbimg.com/_bCeHe8l8gGuZ6XfL0C_rYHhNB4=/0x0:1280x854/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/x/K/iF7eHyTky2IZDMsAvVHQ/whatsapp-image-2019-04-04-at-4.55.07-pm.jpeg',
+        status: 'Pendente Avaliação'
+    }
+]
+
+
+export {
+    countries,
+    genders,
+    banks,
+    patrimoniesValuesToInvest,
+    segmentsToInvest,
+    investorProfiles,
+    documentImages
+ } 
