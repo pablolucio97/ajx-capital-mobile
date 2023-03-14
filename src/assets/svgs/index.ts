@@ -188,6 +188,43 @@ const rightArrow = `
 </svg>
 `
 
+const penLoadingIcon = `
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.62549 18.3577C8.50418 21.2445 12.9634 21.8369 16.4959 19.8016C20.0284 17.7664 21.7525 13.6116 20.6989 9.67324C19.6454 5.7349 16.077 2.99593 12.0001 2.99634" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.1589 15.4285H8.57178V12.8415C8.57178 12.5762 8.67727 12.3217 8.8649 12.1342L12.8666 8.13251C13.2572 7.74196 13.8905 7.74196 14.2812 8.13251L15.8678 9.71917C16.2584 10.1098 16.2584 10.7431 15.8678 11.1338L11.8661 15.1354C11.6786 15.3231 11.4242 15.4285 11.1589 15.4285Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.52367 3.72775C8.52367 3.75537 8.54607 3.77777 8.57369 3.77777C8.60132 3.77777 8.62372 3.75537 8.62372 3.72775C8.62372 3.70012 8.60132 3.67773 8.57369 3.67773C8.54607 3.67773 8.52367 3.70012 8.52367 3.72775" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.6184 5.6694C5.6184 5.69702 5.6408 5.71942 5.66842 5.71942C5.69605 5.71942 5.71844 5.69702 5.71844 5.6694C5.71844 5.64177 5.69605 5.61938 5.66842 5.61938C5.64063 5.61992 5.6184 5.64261 5.6184 5.6704" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.67773 8.57369C3.67773 8.60132 3.70012 8.62372 3.72775 8.62372C3.75537 8.62372 3.77777 8.60132 3.77777 8.57369C3.77777 8.54607 3.75537 8.52367 3.72775 8.52367C3.71448 8.52367 3.70176 8.52894 3.69238 8.53832C3.683 8.54771 3.67773 8.56043 3.67773 8.57369" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99633 12.0002C2.99633 12.0278 3.01873 12.0502 3.04635 12.0502C3.07398 12.0502 3.09637 12.0278 3.09637 12.0002C3.09637 11.9726 3.07398 11.9502 3.04635 11.9502C3.03308 11.9502 3.02036 11.9555 3.01098 11.9648C3.0016 11.9742 2.99633 11.9869 2.99633 12.0002" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.67773 15.4265C3.67773 15.4541 3.70012 15.4765 3.72775 15.4765C3.74562 15.4765 3.76213 15.467 3.77107 15.4515C3.78 15.436 3.78 15.4169 3.77107 15.4015C3.76213 15.386 3.74562 15.3765 3.72775 15.3765C3.70012 15.3765 3.67773 15.3989 3.67773 15.4265" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const envelopeOpenIcon = `
+
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 19V12.5027C2.99999 11.9319 3.32403 11.4105 3.83591 11.1577C4.34779 10.905 4.95876 10.9647 5.412 11.3118L10.7841 15.4254C11.5016 15.9749 12.4985 15.9749 13.216 15.4254L18.5881 11.3118C19.0413 10.9648 19.6523 10.9051 20.1641 11.1578C20.676 11.4105 21 11.9319 21 12.5027V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 11.0862V4C19 2.89543 18.1046 2 17 2H7C5.89543 2 5 2.89543 5 4V11.0862" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 12.5V11.5" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 7V7C10 7.6396 10.4515 8.19029 11.0786 8.31573L12.9214 8.68427C13.5485 8.80971 14 9.3604 14 10V10" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.0001 10C14.0001 10.8284 13.1047 11.5 12.0001 11.5C11.2362 11.5453 10.5113 11.1592 10.1226 10.5" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.8695 6.48045C13.4752 5.83347 12.7564 5.45649 12 5.49998C10.8954 5.49998 10 6.17161 10 6.99998" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 4.5V5.5" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
+
+const bankNoteIcon = `
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 15.9H3.9C2.85 15.9 2 15.05 2 14V4.9C2 3.85 2.85 3 3.9 3H19.1C20.15 3 21 3.85 21 4.9V10" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.179 7.9709C14.106 8.8979 14.106 10.4019 13.179 11.3299C12.252 12.2569 10.748 12.2569 9.82001 11.3299C8.89301 10.4029 8.89301 8.8989 9.82001 7.9709C10.748 7.0429 12.252 7.0429 13.179 7.9709" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 21C15.791 21 14 19.209 14 17C14 14.791 15.791 13 18 13C20.21 13 22 14.791 22 17C22 19.209 20.21 21 18 21" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 13H5" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 6H17" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.7779 16.1111L17.5559 18.3331L16.2219 17.0001" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+`
+
 export {
     googleIcon,
     logo,
@@ -210,4 +247,7 @@ export {
     closeIcon,
     leftArrow,
     rightArrow,
+    bankNoteIcon,
+    penLoadingIcon,
+    envelopeOpenIcon
 }

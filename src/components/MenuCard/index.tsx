@@ -26,7 +26,7 @@ export function MenuCard() {
 
 
     const data = [
-        { icon: bellNotification, content: 'Notifcações', hasUpdates: true, onPress: () => { } },
+        { icon: bellNotification, content: 'Notifcações', hasUpdates: true, onPress: () => navigation.navigate('Notificações' as never) },
         {
             icon: userProfile, content: 'Meus Dados', hasUpdates: true,
             onPress: () => navigation.navigate('Meus Dados' as never)

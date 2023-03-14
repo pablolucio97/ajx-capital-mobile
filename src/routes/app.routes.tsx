@@ -20,6 +20,7 @@ import {
     save,
     saveActive
 } from '../assets/svgs'
+import { Notifications } from 'screens/Notifications'
 
 export function AppRoutes() {
 
@@ -125,6 +126,7 @@ export function AppRoutes() {
                 <StackNavigator.Screen name='Home' component={RenderTabsNavigation} />
                 <StackNavigator.Screen name='Detalhes Perfil' component={Profile} />
                 <StackNavigator.Screen name='Meus Dados' component={MyData} />
+                <StackNavigator.Screen name='Notificações' component={Notifications} />
             </StackNavigator.Navigator>
         </NavigationContainer>
     )
