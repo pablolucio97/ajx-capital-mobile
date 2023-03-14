@@ -191,15 +191,15 @@ export function MyData() {
 
         <Container>
             <StatusBar style="dark" />
-            <HeaderContainer>
-                <ScreenTitle
-                    pageTitle='Meus dados'
-                />
-            </HeaderContainer>
             <TouchableContainer>
                 <ContentContainer
                     showsVerticalScrollIndicator={false}
                 >
+                    <HeaderContainer>
+                        <ScreenTitle
+                            pageTitle='Meus dados'
+                        />
+                    </HeaderContainer>
                     <TitleContainer>
                         <FormTitleProgress
                             formTitle={formTitle}
@@ -207,14 +207,14 @@ export function MyData() {
                         />
                     </TitleContainer>
                     {renderForm()}
-                    <StepController
-                        nextAction={handleNext}
-                        previousAction={handlePrevious}
-                        disabledPreviousButton={registrationProgress <= 0}
-                        isLastStep={registrationProgress >= 6}
-                    />
                 </ContentContainer>
             </TouchableContainer>
+            <StepController
+                nextAction={handleNext}
+                previousAction={handlePrevious}
+                disabledPreviousButton={registrationProgress <= 0}
+                isLastStep={registrationProgress >= 6}
+            />
         </Container>
     )
 }

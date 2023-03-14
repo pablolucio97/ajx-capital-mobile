@@ -42,20 +42,6 @@ export function AppRoutes() {
         },
     }
 
-    function RenderStackNavigator() {
-        return (
-            <StackNavigator.Navigator 
-            initialRouteName='Detalhes Perfil'
-            screenOptions={{
-                headerShown: false
-            }}
-            >
-                <StackNavigator.Screen name='Detalhes Perfil' component={Profile} />
-                <StackNavigator.Screen name='Meus Dados' component={MyData} />
-            </StackNavigator.Navigator>
-        )
-    }
-
     const screens = [
         {
             name: 'Home',
@@ -79,15 +65,13 @@ export function AppRoutes() {
         },
         {
             name: 'Perfil',
-            component: RenderStackNavigator,
+            component: Profile,
             options: screensConfig
         }
     ]
 
-
-
-    return (
-        <NavigationContainer>
+    function RenderTabsNavigation() {
+        return (
             <TabNavigator.Navigator initialRouteName='Home'
                 screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused }) => {
@@ -127,6 +111,21 @@ export function AppRoutes() {
                     />
                 ))}
             </TabNavigator.Navigator>
+        )
+    }
+
+    return (
+        <NavigationContainer>
+            <StackNavigator.Navigator
+                initialRouteName='Home'
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <StackNavigator.Screen name='Home' component={RenderTabsNavigation} />
+                <StackNavigator.Screen name='Detalhes Perfil' component={Profile} />
+                <StackNavigator.Screen name='Meus Dados' component={MyData} />
+            </StackNavigator.Navigator>
         </NavigationContainer>
     )
 }

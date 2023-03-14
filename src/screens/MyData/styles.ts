@@ -14,6 +14,7 @@ background-color: ${({ theme }) => theme.colors.backgroundLight};
 
 export const ContentContainer = styled.ScrollView`
 padding-top: ${RFValue(24)}px;
+margin-bottom: ${RFValue(96)}px;
 `
 
 export const TitleContainer = styled.View`

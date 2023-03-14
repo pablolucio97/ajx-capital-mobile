@@ -12,7 +12,9 @@ justify-content: space-between;
 align-items: center;
 background-color: ${({ theme }) => theme.colors.backgroundLight};
 padding: 0 ${RFValue(24)}px;
-margin-bottom:  ${RFValue(24)}px;
+position: absolute;
+bottom: 0;
+right: 0;
 `
 export const Button = styled(TouchableOpacity).attrs({
     activeOpacity: .8
