@@ -1,12 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigation } from '@react-navigation/native';
 import { FormTitleProgress } from 'components/FormTitleProgress';
 import { ScreenTitle } from 'components/ScreenTitle';
 import { StepController } from 'components/StepController';
 import { StatusBar } from 'expo-status-bar';
-import { documents } from 'utils/mockedData';
 
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FormStepFive } from './FormStepFive';
 import { FormStepFour } from './FormStepFour';
 import { FormStepOne } from './FormStepOne';
@@ -54,6 +52,7 @@ export function MyData() {
     const [isPoliticExposedPeople, setIsPoliticExposedPeople] = useState(false)
     const [agreeDisplayedAsInvestor, setAgreeDisplayedAsInvestor] = useState(false)
 
+
     function handleSave() {
         setRegistrationProgress(6)
     }
@@ -71,11 +70,7 @@ export function MyData() {
 
     }
 
-    async function handleUploadDocument() {
-        return
-    }
-
-    function updateFormTitle() {
+    const updateFormTitle = useCallback(() => {
         switch (registrationProgress) {
             case 1:
                 setFormTitle('Dados Gerais')
@@ -97,7 +92,9 @@ export function MyData() {
                 break
             default: 'Dados Gerais'
         }
-    }
+    }, [registrationProgress])
+
+
 
     function renderForm() {
         switch (registrationProgress) {
@@ -174,10 +171,7 @@ export function MyData() {
                 )
             case 6:
                 return (
-                    <FormStepSix
-                        documentList={documents}
-                        uploadDocument={handleUploadDocument}
-                    />
+                    <FormStepSix />
                 )
             default: 1
         }
@@ -185,7 +179,7 @@ export function MyData() {
 
     useEffect(() => {
         updateFormTitle()
-    }, [registrationProgress])
+    }, [updateFormTitle])
 
     return (
 
