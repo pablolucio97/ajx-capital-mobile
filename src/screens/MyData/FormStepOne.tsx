@@ -48,6 +48,7 @@ export function FormStepOne({
                 label='Nome Completo'
                 value={name}
                 onChangeText={setName}
+                autoFocus
             />
             <InputMaskText
                 label='Data de nascimento'

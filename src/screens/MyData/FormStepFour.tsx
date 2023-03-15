@@ -30,6 +30,7 @@ export function FormStepFour({
                 value={agency}
                 onChangeText={setAgency}
                 keyboardType='numeric'
+                autoFocus
             />
             <InputMaskText
                 label='Conta com dígito'

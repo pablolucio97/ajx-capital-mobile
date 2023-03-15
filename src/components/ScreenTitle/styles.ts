@@ -11,6 +11,9 @@ export const TitleContainer = styled.View`
 flex-direction: row;
 align-items: center;
 `
+
+export const CloseButton = styled.TouchableOpacity``
+
 export const Title = styled.Text`
 margin-left: ${RFValue(24)}px;
 font-size: ${RFValue(16)}px;

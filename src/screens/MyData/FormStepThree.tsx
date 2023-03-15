@@ -27,6 +27,7 @@ export function FormStepThree({
                 label='Ocupação'
                 value={occupation}
                 onChangeText={setOccupation}
+                autoFocus
             />
             <InputText
                 label='Nome da empresa (opcional)'

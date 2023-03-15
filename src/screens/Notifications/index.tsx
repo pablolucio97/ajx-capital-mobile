@@ -4,13 +4,18 @@ import { NotificationCard } from 'components/NotificationCard'
 import { FlatList } from 'react-native';
 import { notifications } from 'utils/mockedData';
 import { ScreenTitle } from 'components/ScreenTitle';
+import { useNavigation } from '@react-navigation/native'
 
 export function Notifications() {
+
+    const navigation = useNavigation()
+
     return (
         <Container>
             <HeaderContainer>
                 <ScreenTitle
                     pageTitle='Notificações'
+                    onCloseScreen={() => navigation.goBack()}
                 />
             </HeaderContainer>
             <FlatList

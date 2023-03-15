@@ -39,6 +39,7 @@ export function FormStepTwo({
                 value={cep}
                 onChangeText={setCep}
                 keyboardType='numeric'
+                autoFocus
             />
             <InputText
                 label='Rua'

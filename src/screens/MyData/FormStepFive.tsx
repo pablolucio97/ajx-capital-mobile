@@ -41,6 +41,21 @@ export function FormStepFive({
 
     return (
         <FormContainer>
+            <InputMaskText
+                label='Informe sua renda mensal'
+                mask={Masks.BRL_CURRENCY}
+                value={monthlyIncome}
+                onChangeText={setMonthlyIncome}
+                keyboardType='numeric'
+                autoFocus
+            />
+            <InputMaskText
+                label='Informe o valor do seu patrimônio'
+                mask={Masks.BRL_CURRENCY}
+                value={totalPatrimony}
+                onChangeText={setTotalPatrimony}
+                keyboardType='numeric'
+            />
             <SelectPicker
                 label='Qual situação melhor se encaixa ao seu perfil em relação a investimento ? (opcional)'
                 defaultButtonText=' '
@@ -64,20 +79,6 @@ export function FormStepFive({
                 onSelect={(selectedItem) => {
                     setPatrimonyToInvest(selectedItem)
                 }}
-            />
-            <InputMaskText
-                label='Informe sua renda mensal'
-                mask={Masks.BRL_CURRENCY}
-                value={monthlyIncome}
-                onChangeText={setMonthlyIncome}
-                keyboardType='numeric'
-            />
-            <InputMaskText
-                label='Informe o valor do seu patrimônio'
-                mask={Masks.BRL_CURRENCY}
-                value={totalPatrimony}
-                onChangeText={setTotalPatrimony}
-                keyboardType='numeric'
             />
             <CheckContainer>
                 <Checkbox

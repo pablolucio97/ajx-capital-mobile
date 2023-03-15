@@ -198,6 +198,7 @@ export function MyData() {
                     <HeaderContainer>
                         <ScreenTitle
                             pageTitle='Meus dados'
+                            onCloseScreen={() => navigation.goBack()}
                         />
                     </HeaderContainer>
                     <TitleContainer>
