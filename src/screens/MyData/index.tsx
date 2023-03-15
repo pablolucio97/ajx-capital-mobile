@@ -215,6 +215,7 @@ export function MyData() {
                 previousAction={handlePrevious}
                 disabledPreviousButton={registrationProgress <= 0}
                 isLastStep={registrationProgress >= 6}
+                isFirstStep={registrationProgress <= 1}
             />
         </Container>
     )
