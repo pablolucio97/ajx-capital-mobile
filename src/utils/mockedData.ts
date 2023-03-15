@@ -124,6 +124,24 @@ const notifications = [
 ]
 
 
+const contentImages = [
+    'https://i.ibb.co/Z8FBrgs/content1.png',
+    'https://i.ibb.co/CQM4DmT/content2.png'
+]
+
+const newsImages = [
+    'https://i.ibb.co/M8gmp2X/news1.png',
+    'https://i.ibb.co/x5XCpxY/news2.png',
+    'https://i.ibb.co/cTVS7VV/news3.png'
+]
+
+const podcastsImages = [
+    'https://i.ibb.co/b5YQcsk/podcast1.png',
+    'https://i.ibb.co/1JvH2Dd/podcast2.png',
+    'https://i.ibb.co/Xj2xSrS/podcast3.png'
+]
+
+
 export {
     countries,
     genders,
@@ -132,5 +150,8 @@ export {
     segmentsToInvest,
     investorProfiles,
     documents,
-    notifications
+    notifications,
+    contentImages,
+    podcastsImages,
+    newsImages
  } 
