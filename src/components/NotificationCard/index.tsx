@@ -1,5 +1,10 @@
 import { SvgXml } from 'react-native-svg';
 import {
+    penLoadingIcon,
+    envelopeOpenIcon,
+    bankNoteIcon
+} from '../../assets/svgs'
+import {
     Container,
     Text,
     TextContainer,
@@ -11,23 +16,53 @@ interface NotificationCardProps {
     title: string;
     sentFrom: string;
     timeSinceSent: string;
-    iconXml: string;
+    iconType: string;
 }
 
 export function NotificationCard({
-    iconXml,
+    iconType,
     sentFrom,
     timeSinceSent,
     title
 }: NotificationCardProps) {
+
+
+    function renderIconType() {
+        switch (iconType) {
+            case 'data':
+                return (
+                    <SvgXml
+                        xml={penLoadingIcon}
+                        width={24}
+                        height={24}
+                    />
+                )
+            case 'payment':
+                return (
+                    <SvgXml
+                        xml={envelopeOpenIcon}
+                        width={24}
+                        height={24}
+                    />
+                )
+            case 'investment':
+                return (
+                    <SvgXml
+                        xml={bankNoteIcon}
+                        width={24}
+                        height={24}
+                    />
+                )
+            default: 'investment'
+        }
+    }
+
     return (
-        <Container>
+        <Container
+            activeOpacity={0.88}
+        >
             <TitleContainer>
-                <SvgXml
-                    xml={iconXml}
-                    width={24}
-                    height={24}
-                />
+                {renderIconType()}
                 <Title>{title}</Title>
             </TitleContainer>
             <TextContainer>

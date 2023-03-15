@@ -57,6 +57,72 @@ const documents = [
     }
 ]
 
+const notifications = [
+    {
+        id: '1',
+        title: 'Complete seu cadastro',
+        timeSinceSent: '2 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'data'
+    },
+    {
+        id: '2',
+        title: 'Seu investimento remunerou 😍',
+        timeSinceSent: '3 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'investment'
+    },
+    {
+        id: '3',
+        title: 'Não detectamos o pagamento do seu Boleto',
+        timeSinceSent: '2 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'payment'
+    },
+    {
+        id: '4',
+        title: 'Complete seu cadastro',
+        timeSinceSent: '2 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'data'
+    },
+    {
+        id: '5',
+        title: 'Seu investimento remunerou 😍',
+        timeSinceSent: '3 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'investment'
+    },
+    {
+        id: '6',
+        title: 'Não detectamos o pagamento do seu Boleto.',
+        timeSinceSent: '2 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'payment'
+    },
+    {
+        id: '7',
+        title: 'Complete seu cadastro',
+        timeSinceSent: '2 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'data'
+    },
+    {
+        id: '8',
+        title: 'Seu investimento remunerou 😍',
+        timeSinceSent: '3 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'investment'
+    },
+    {
+        id: '9',
+        title: 'Não detectamos o pagamento do seu Boleto.',
+        timeSinceSent: '2 minutos atrás',
+        sentFrom: 'Sistema',
+        iconType: 'payment'
+    },
+]
+
 
 export {
     countries,
@@ -65,5 +131,6 @@ export {
     patrimoniesValuesToInvest,
     segmentsToInvest,
     investorProfiles,
-    documents
+    documents,
+    notifications
  } 
