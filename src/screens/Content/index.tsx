@@ -1,4 +1,5 @@
 import { AJXPlatinumCard } from 'components/AJXPlatinumCard';
+import { BadgeText } from 'components/BadgeText';
 import { ContentCard } from 'components/ContentCard';
 import { NewsCard } from 'components/NewsCard';
 import { PodcastCard } from 'components/PodcastCard';
@@ -8,6 +9,7 @@ import {
     podcastsImages
 } from 'utils/mockedData';
 import {
+    BadgesContainer,
     Container,
     ContentContainer,
     HorizontalScrollContainer,
@@ -21,6 +23,17 @@ export function Content() {
             <ContentContainer
                 showsVerticalScrollIndicator={false}
             >
+                <BadgesContainer>
+                    <BadgeText
+                        content='Investimentos'
+                    />
+                    <BadgeText
+                        content='Empreendedor'
+                    />
+                    <BadgeText
+                        content='Tecnologia'
+                    />
+                </BadgesContainer>
                 <HorizontalScrollContainer
                     horizontal
                     showsHorizontalScrollIndicator={false}
