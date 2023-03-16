@@ -1,3 +1,4 @@
+import { AJXPlatinumCard } from 'components/AJXPlatinumCard';
 import { ContentCard } from 'components/ContentCard';
 import { NewsCard } from 'components/NewsCard';
 import { PodcastCard } from 'components/PodcastCard';
@@ -48,6 +49,21 @@ export function Content() {
                             totalVideos={news.numberOfVideos}
                         />
                     ))}
+                </HorizontalScrollContainer>
+                <HorizontalScrollContainer
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                >
+                    <AJXPlatinumCard
+                        title='AJX Plátinum'
+                        content='Experimente nosso novo Investimento CBB'
+                        isImage
+                    />
+                    <AJXPlatinumCard
+                        title='AJX Plátinum'
+                        content='Experimente nosso novo Investimento CBB'
+                        isImage={false}
+                    />
                 </HorizontalScrollContainer>
                 <Subtitle>
                     Podcasts
