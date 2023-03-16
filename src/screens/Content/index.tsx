@@ -3,6 +3,7 @@ import { BadgeText } from 'components/BadgeText';
 import { ContentCard } from 'components/ContentCard';
 import { NewsCard } from 'components/NewsCard';
 import { PodcastCard } from 'components/PodcastCard';
+import { SearchInput } from 'components/SearchInput';
 import {
     contentImages,
     newsImages,
@@ -23,6 +24,9 @@ export function Content() {
             <ContentContainer
                 showsVerticalScrollIndicator={false}
             >
+                <SearchInput
+                    placeholder='O que você procura?'
+                />
                 <BadgesContainer>
                     <BadgeText
                         content='Investimentos'
