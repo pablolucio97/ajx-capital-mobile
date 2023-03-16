@@ -168,6 +168,8 @@ const podcastsImages = [
     'https://i.ibb.co/Xj2xSrS/podcast3.png'
 ]
 
+const contentDetailBackgroundImage = 'https://i.ibb.co/kJHwQXT/Group-41.png'
+
 
 export {
     countries,
@@ -180,5 +182,6 @@ export {
     notifications,
     contentImages,
     podcastsImages,
-    newsImages
+    newsImages,
+    contentDetailBackgroundImage
  } 

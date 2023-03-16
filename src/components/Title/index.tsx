@@ -1,13 +1,17 @@
-import { TextProps } from 'react-native'
+import { TextStyle } from 'react-native';
 import { TitleEl } from './styles';
 
-interface TitleProps extends TextProps {
+type TitleProps = {
     content: string;
+    style: TextStyle;
 }
 
-export function Title({ content }: TitleProps) {
+export function Title({ content, style }: TitleProps) {
     return (
-        <TitleEl>
+        <TitleEl
+            //@ts-ignore
+            style={style}
+        >
             {content}
         </TitleEl>
     )

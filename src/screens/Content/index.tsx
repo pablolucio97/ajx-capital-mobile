@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { AJXPlatinumCard } from 'components/AJXPlatinumCard';
 import { BadgeText } from 'components/BadgeText';
 import { ContentCard } from 'components/ContentCard';
@@ -26,10 +27,12 @@ import {
     Subtitle,
     Title,
     TitleContainer,
-    TitleHeaderContdainer,
+    TitleHeaderContdainer
 } from './styles';
 
 export function Content() {
+
+    const navigation = useNavigation()
 
     return (
         <Container>
@@ -90,6 +93,7 @@ export function Content() {
                             imgPath={content.image}
                             author={content.author}
                             title={content.title}
+                            onPress={() => navigation.navigate('Detalhes conteúdo' as never)}
                         />
                     ))}
                 </HorizontalScrollContainer>

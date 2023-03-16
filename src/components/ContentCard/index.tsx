@@ -8,17 +8,20 @@ import {
 interface ContentCardProps {
     imgPath: string;
     author: string;
-    title: string
+    title: string;
+    onPress?: () => void;
 }
 
 export function ContentCard({
     imgPath,
     title,
-    author
+    author,
+    onPress
 }: ContentCardProps) {
     return (
         <Container
             activeOpacity={0.8}
+            onPress={onPress}
         >
             <Image
                 source={{ uri: imgPath }}

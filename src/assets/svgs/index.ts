@@ -230,6 +230,12 @@ const favoriteIcon = `
 </svg>
 `
 
+const leftArrowLight = `
+<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34 17C35.1046 17 36 16.1046 36 15C36 13.8954 35.1046 13 34 13L34 17ZM0.585786 13.5858C-0.195262 14.3668 -0.195262 15.6332 0.585787 16.4142L13.3137 29.1421C14.0948 29.9232 15.3611 29.9232 16.1421 29.1421C16.9232 28.3611 16.9232 27.0948 16.1421 26.3137L4.82843 15L16.1421 3.68629C16.9232 2.90524 16.9232 1.63891 16.1421 0.857863C15.3611 0.0768146 14.0948 0.0768147 13.3137 0.857863L0.585786 13.5858ZM34 13L2 13L2 17L34 17L34 13Z" fill="white"/>
+</svg>
+`
+
 export {
     googleIcon,
     logo,
@@ -255,5 +261,6 @@ export {
     bankNoteIcon,
     penLoadingIcon,
     envelopeOpenIcon,
-    favoriteIcon
+    favoriteIcon,
+    leftArrowLight
 }
