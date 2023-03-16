@@ -1,4 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
+import { PlayVideoCard } from 'components/PlayVideoCard';
 import { Text } from 'components/Text';
 import { Title } from 'components/Title';
 import { StatusBar } from 'expo-status-bar';
@@ -42,6 +43,18 @@ export function ContentDetails() {
                 <Text
                     content='Cras rhoncus lacus ac tempus pharetra. Sed facilisis lectus nec nisi sodales feugiat. Vivamus eu ipsum tortor. Duis sit amet tincidunt augue. Nunc ut egestas justo, maximus iaculis turpis. Proin vel urna ac lacus sagittis convallis. Sed vehicula orci augue, fermentum lacinia dolor facilisis vel. Cras sed mi eget odio iaculis elementum. Donec imperdiet eu mi at posuere.'
                     style={Styles.text}
+                />
+                <PlayVideoCard
+                    content='Sed mollis orci urna, 
+                    in sollicitudin arcu convallis non.'
+                />
+                <PlayVideoCard
+                    content='Sed mollis orci urna, 
+                    in sollicitudin arcu convallis non.'
+                />
+                <PlayVideoCard
+                    content='Sed mollis orci urna, 
+                    in sollicitudin arcu convallis non.'
                 />
             </ContentContainer>
         </Container>

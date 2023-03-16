@@ -35,5 +35,6 @@ export const Styles = StyleSheet.create({
     },
     text:{
         fontSize: RFValue(12),
+        marginBottom: RFValue(24)
     }
 })
