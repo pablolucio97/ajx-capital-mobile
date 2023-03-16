@@ -4,29 +4,71 @@ import { ContentCard } from 'components/ContentCard';
 import { NewsCard } from 'components/NewsCard';
 import { PodcastCard } from 'components/PodcastCard';
 import { SearchInput } from 'components/SearchInput';
+import { StatusBar } from 'expo-status-bar';
+import { SvgXml } from 'react-native-svg';
 import {
     contentImages,
     newsImages,
     podcastsImages
 } from 'utils/mockedData';
+import { favoriteIcon, logo } from '../../assets/svgs';
 import {
     BadgesContainer,
+    Button,
+    ButtonContainer,
     Container,
     ContentContainer,
+    HeaderContainer,
     HorizontalScrollContainer,
-    Subtitle
+    InputContainer,
+    LogoContainer,
+    SearchContainer,
+    Subtitle,
+    Title,
+    TitleContainer,
+    TitleHeaderContdainer,
 } from './styles';
 
 export function Content() {
 
     return (
         <Container>
+            <StatusBar
+                style='dark'
+            />
             <ContentContainer
                 showsVerticalScrollIndicator={false}
             >
-                <SearchInput
-                    placeholder='O que você procura?'
-                />
+                <HeaderContainer>
+                    <TitleHeaderContdainer>
+                        <TitleContainer>
+                            <Title>Conteúdos</Title>
+                        </TitleContainer>
+                        <LogoContainer>
+                            <SvgXml
+                                xml={logo}
+                                width={64}
+                                height={54}
+                            />
+                        </LogoContainer>
+                    </TitleHeaderContdainer>
+                </HeaderContainer>
+                <SearchContainer>
+                    <InputContainer>
+                        <SearchInput
+                            placeholder='O que você procura?'
+                        />
+                    </InputContainer>
+                    <ButtonContainer>
+                        <Button
+                            activeOpacity={0.64}
+                        >
+                            <SvgXml
+                                xml={favoriteIcon}
+                            />
+                        </Button>
+                    </ButtonContainer>
+                </SearchContainer>
                 <BadgesContainer>
                     <BadgeText
                         content='Investimentos'

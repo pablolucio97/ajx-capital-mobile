@@ -222,7 +222,12 @@ const bankNoteIcon = `
 <path d="M18 6H17" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19.7779 16.1111L17.5559 18.3331L16.2219 17.0001" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+`
 
+const favoriteIcon = `
+<svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.83333 1H19.1667C21.0083 1 22.5 2.49167 22.5 4.33333V31L12.0133 25.545L1.5 31V4.33333C1.5 2.49167 2.99167 1 4.83333 1Z" stroke="#3AC6F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 `
 
 export {
@@ -249,5 +254,6 @@ export {
     rightArrow,
     bankNoteIcon,
     penLoadingIcon,
-    envelopeOpenIcon
+    envelopeOpenIcon,
+    favoriteIcon
 }

@@ -22,5 +22,4 @@ color: ${({ theme }) => theme.colors.textDark};
 `
 
 export const LogoContainer = styled.View`
-
 `
