@@ -125,18 +125,45 @@ const notifications = [
 
 
 const contentImages = [
-    'https://i.ibb.co/Z8FBrgs/content1.png',
-    'https://i.ibb.co/CQM4DmT/content2.png'
+    {
+        author: 'Flávio Augusto',
+        title: 'A Caminhada',
+        image: 'https://i.ibb.co/4jrdDcv/Mask-group.png',
+    },
+    {
+        author: 'Caito Maia',
+        title: 'Como ser FODA',
+        image: 'https://i.ibb.co/Z8FBrgs/content2.png',
+    },
+    {
+        author: 'Caito Maia',
+        title: 'Como ser FODA',
+        image: 'https://i.ibb.co/Z8FBrgs/content2.png',
+    },
 ]
 
 const newsImages = [
-    'https://i.ibb.co/M8gmp2X/news1.png',
-    'https://i.ibb.co/x5XCpxY/news2.png',
-    'https://i.ibb.co/cTVS7VV/news3.png'
+
+    {
+        author: 'Thiago Nigro',
+        numberOfVideos: 6,
+        image: 'https://i.ibb.co/M8gmp2X/news1.png',
+    },
+    {
+        author: 'Jorge Paulo Lemman',
+        numberOfVideos: 5,
+        image: 'https://i.ibb.co/x5XCpxY/news2.png',
+    },
+    {
+        author: 'Abilio Diniz',
+        numberOfVideos: 12,
+        image: 'https://i.ibb.co/cTVS7VV/news3.png',
+    }
 ]
 
 const podcastsImages = [
     'https://i.ibb.co/b5YQcsk/podcast1.png',
+    'https://i.ibb.co/1JvH2Dd/podcast2.png',
     'https://i.ibb.co/1JvH2Dd/podcast2.png',
     'https://i.ibb.co/Xj2xSrS/podcast3.png'
 ]
