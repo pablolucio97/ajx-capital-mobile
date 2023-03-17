@@ -1,11 +1,14 @@
 import { Container } from './styles';
-import { Text } from 'components/Text'
+import { BalanceCard } from 'components/BalanceCard';
 
 export function Home() {
     return (
         <Container>
-            <Text
-                content='Home'
+            <BalanceCard
+                balance='16.000'
+                profit='R$1.600,00'
+                profitPercentage='10'
+                balanceDecimal=',00'
             />
         </Container>
     )
