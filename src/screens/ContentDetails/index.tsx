@@ -45,8 +45,6 @@ export function ContentDetails() {
                     content='Cras rhoncus lacus ac tempus pharetra. Sed facilisis lectus nec nisi sodales feugiat. Vivamus eu ipsum tortor. Duis sit amet tincidunt augue. Nunc ut egestas justo, maximus iaculis turpis. Proin vel urna ac lacus sagittis convallis. Sed vehicula orci augue, fermentum lacinia dolor facilisis vel. Cras sed mi eget odio iaculis elementum. Donec imperdiet eu mi at posuere.'
                     style={Styles.text}
                 />
-
-
                 <FlatList
                     data={podcastsList}
                     renderItem={({ item }) => (

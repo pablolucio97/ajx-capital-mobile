@@ -230,6 +230,27 @@ const favoriteIcon = `
 </svg>
 `
 
+const favoritedIcon = `
+<svg width="193" height="276" viewBox="0 0 193 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M93.6265 220.046L6.5 265.299V30.6667C6.5 17.3068 17.3053 6.5 30.6349 6.5H162.365C175.695 6.5 186.5 17.3068 186.5 30.6667V265.287L99.6246 220.049C97.7452 219.07 95.5068 219.069 93.6265 220.046Z" stroke="#3AC6F4" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="10" y="12" width="173" height="208" fill="#3AC6F4"/>
+<rect x="10" y="212" width="39" height="25" fill="#3AC6F4"/>
+<rect x="18" y="206" width="39" height="25" fill="#3AC6F4"/>
+<rect x="144" y="207" width="39" height="25" fill="#3AC6F4"/>
+<rect x="135" y="202" width="39" height="25" fill="#3AC6F4"/>
+<rect x="2" y="238" width="35" height="17" fill="#3AC6F4"/>
+<rect x="22" y="228" width="35" height="17" fill="#3AC6F4"/>
+<rect x="44" y="215" width="35" height="17" fill="#3AC6F4"/>
+<rect x="114" y="215" width="35" height="17" fill="#3AC6F4"/>
+<rect x="137" y="226" width="35" height="17" fill="#3AC6F4"/>
+<rect x="155" y="238" width="35" height="17" fill="#3AC6F4"/>
+<rect x="10" y="228" width="11" height="17" fill="#3AC6F4"/>
+<rect x="13" y="223" width="11" height="17" fill="#3AC6F4"/>
+<rect x="158" y="221" width="11" height="17" fill="#3AC6F4"/>
+<rect x="169" y="226" width="11" height="17" fill="#3AC6F4"/>
+</svg>
+`
+
 const leftArrowLight = `
 <svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M34 17C35.1046 17 36 16.1046 36 15C36 13.8954 35.1046 13 34 13L34 17ZM0.585786 13.5858C-0.195262 14.3668 -0.195262 15.6332 0.585787 16.4142L13.3137 29.1421C14.0948 29.9232 15.3611 29.9232 16.1421 29.1421C16.9232 28.3611 16.9232 27.0948 16.1421 26.3137L4.82843 15L16.1421 3.68629C16.9232 2.90524 16.9232 1.63891 16.1421 0.857863C15.3611 0.0768146 14.0948 0.0768147 13.3137 0.857863L0.585786 13.5858ZM34 13L2 13L2 17L34 17L34 13Z" fill="white"/>
@@ -276,5 +297,6 @@ export {
     envelopeOpenIcon,
     favoriteIcon,
     leftArrowLight,
-    playVideoIcon
+    playVideoIcon,
+    favoritedIcon
 }

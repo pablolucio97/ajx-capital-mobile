@@ -193,6 +193,45 @@ const podcastsList = [
     },
 ]
 
+const favoritePodcastsList = [
+    {
+        id: '1',
+        title: 'Podcast1 preview description',
+        author: 'Podcast',
+        image: 'https://i.ibb.co/b5YQcsk/podcast1.png',
+        isFavorite: true
+    },
+    {
+        id: '2',
+        title: 'Podcast2 preview description',
+        author: 'Podcast',
+        image: 'https://i.ibb.co/1JvH2Dd/podcast2.png',
+        isFavorite: false
+    },
+    {
+        id: '3',
+        title: 'Podcast3 preview description',
+        author: 'Thiago Nigro',
+        image: 'https://i.ibb.co/M8gmp2X/news1.png',
+        isFavorite: true
+    },
+    {
+        id: '4',
+        title: 'Podcast4 preview description',
+        author: 'Flávio Augusto',
+        image: 'https://i.ibb.co/4jrdDcv/Mask-group.png',
+        isFavorite: true
+    },
+    {
+        id: '5',
+        title: 'Podcast5 preview description',
+        author: 'Abilio Diniz',
+        image: 'https://i.ibb.co/cTVS7VV/news3.png',
+        isFavorite: true
+    },
+]
+
+
 
 export {
     countries,
@@ -207,5 +246,6 @@ export {
     podcastsImages,
     newsImages,
     contentDetailBackgroundImage,
-    podcastsList
+    podcastsList,
+    favoritePodcastsList
 } 
