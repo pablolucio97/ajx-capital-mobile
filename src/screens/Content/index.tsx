@@ -93,7 +93,8 @@ export function Content() {
                             imgPath={content.image}
                             author={content.author}
                             title={content.title}
-                            onPress={() => navigation.navigate('Detalhes conteúdo' as never)}
+                            onPress={() => navigation.navigate('Detalhes conteúdo' as never)
+                            }
                         />
                     ))}
                 </HorizontalScrollContainer>
@@ -110,6 +111,7 @@ export function Content() {
                             imgPath={news.image}
                             author={news.author}
                             totalVideos={news.numberOfVideos}
+                            onPress={() => navigation.navigate('Favoritos' as never)}
                         />
                     ))}
                 </HorizontalScrollContainer>

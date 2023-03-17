@@ -2,13 +2,13 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native'
 
 export const Container = styled.TouchableOpacity`
-width: 100%;
+width: 98%;
 align-items: center;
 border-radius: ${RFValue(10)}px;
 background-color: ${({ theme }) => theme.colors.backgroundLight};
 elevation: 2;
 padding: ${RFValue(24)}px;
-margin-bottom: ${RFValue(16)}px;
+margin: ${RFValue(12)}px auto;
 `
 
 export const TitleContainer = styled.View`

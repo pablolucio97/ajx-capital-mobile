@@ -10,16 +10,19 @@ interface NewsCardProps {
     imgPath: string;
     author: string;
     totalVideos: number
+    onPress?: () => void;
 }
 
 export function NewsCard({
     imgPath,
     totalVideos,
-    author
+    author,
+    onPress
 }: NewsCardProps) {
     return (
         <Container
             activeOpacity={0.8}
+            onPress={onPress}
         >
             <Image
                 source={{ uri: imgPath }}

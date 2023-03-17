@@ -22,6 +22,7 @@ import {
 } from '../assets/svgs'
 import { Notifications } from 'screens/Notifications'
 import { ContentDetails } from 'screens/ContentDetails'
+import { Favorites } from 'screens/Favorites'
 
 export function AppRoutes() {
 
@@ -129,6 +130,7 @@ export function AppRoutes() {
                 <StackNavigator.Screen name='Meus Dados' component={MyData} />
                 <StackNavigator.Screen name='Notificações' component={Notifications} />
                 <StackNavigator.Screen name='Detalhes conteúdo' component={ContentDetails} />
+                <StackNavigator.Screen name='Favoritos' component={Favorites} />
             </StackNavigator.Navigator>
         </NavigationContainer>
     )
