@@ -10,7 +10,6 @@ align-items: center;
 justify-content: flex-start;
 background-color: ${({ theme }) => theme.colors.primaryDark};
 margin: ${RFValue(16)}px 0;
-margin-right: ${RFValue(8)}px;
 `
 
 export const ContainerImage = styled.TouchableOpacity``
