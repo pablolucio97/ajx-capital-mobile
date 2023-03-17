@@ -170,6 +170,29 @@ const podcastsImages = [
 
 const contentDetailBackgroundImage = 'https://i.ibb.co/kJHwQXT/Group-41.png'
 
+const podcastsList = [
+    {
+        id: '1',
+        title: 'Podcast1 preview description'
+    },
+    {
+        id: '2',
+        title: 'Podcast2 preview description'
+    },
+    {
+        id: '3',
+        title: 'Podcast3 preview description'
+    },
+    {
+        id: '4',
+        title: 'Podcast4 preview description'
+    },
+    {
+        id: '5',
+        title: 'Podcast5 preview description'
+    },
+]
+
 
 export {
     countries,
@@ -183,5 +206,6 @@ export {
     contentImages,
     podcastsImages,
     newsImages,
-    contentDetailBackgroundImage
- } 
+    contentDetailBackgroundImage,
+    podcastsList
+} 

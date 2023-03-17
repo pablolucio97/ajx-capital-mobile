@@ -4,11 +4,11 @@ import { SvgXml } from 'react-native-svg'
 import { playVideoIcon } from '../../assets/svgs';
 
 interface PlayVideoCardProps {
-    content: string;
+    title: string;
     onPress?: () => void;
 }
 
-export function PlayVideoCard({ content, onPress }: PlayVideoCardProps) {
+export function PlayVideoCard({ title, onPress }: PlayVideoCardProps) {
     return (
         <Container
             onPress={onPress}
@@ -17,7 +17,7 @@ export function PlayVideoCard({ content, onPress }: PlayVideoCardProps) {
             <SvgXml
                 xml={playVideoIcon}
             />
-            <Text>{content}</Text>
+            <Text>{title}</Text>
         </Container>
     )
 }
