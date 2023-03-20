@@ -22,7 +22,8 @@ interface InvestmentCardProps {
     total: string
     progress: number;
     noDetectedInvestedValue?: boolean;
-    onPress: () => void;
+    onPress?: () => void;
+    isNavigable?: boolean;
 }
 
 export function InvestmentCard({
@@ -33,7 +34,8 @@ export function InvestmentCard({
     time,
     total,
     noDetectedInvestedValue,
-    onPress
+    onPress,
+    isNavigable = true
 }: InvestmentCardProps) {
 
     const progressPercentage = progress / 100
@@ -41,13 +43,16 @@ export function InvestmentCard({
     return (
         <Container
             onPress={onPress}
-            activeOpacity={0.8}
+            activeOpacity={isNavigable ? 0.8 : 1}
         >
             <TitleContainer>
                 <Title>CCB AJX CARBON  INVESTIMENTO ${investmentPercentage}%</Title>
-                <SvgXml
-                    xml={arrowRightDark}
-                />
+                {
+                    isNavigable &&
+                    <SvgXml
+                        xml={arrowRightDark}
+                    />
+                }
             </TitleContainer>
             <ContentContainer>
                 <Text>Valor Aportado:</Text>
