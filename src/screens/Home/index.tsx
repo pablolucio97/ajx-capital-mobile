@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { AJXPlatinumCard } from 'components/AJXPlatinumCard';
 import { BalanceCard } from 'components/BalanceCard';
 import { InvestmentCard } from 'components/InvestmentCard';
@@ -15,6 +16,9 @@ import {
 } from './styles';
 
 export function Home() {
+
+    const navigation = useNavigation()
+
     return (
         <Container>
             <StatusBar
@@ -65,6 +69,7 @@ export function Home() {
                     renumbering='2,0'
                     time='18 Meses'
                     total='R$ 1.000.000,00'
+                    onPress={() => navigation.navigate('Investimentos' as never)}
                 />
                 <InvestmentCard
                     contributedValue='R$ 564.000,00'
@@ -73,6 +78,7 @@ export function Home() {
                     renumbering='2,0'
                     time='18 Meses'
                     total='R$ 1.000.000,00'
+                    onPress={() => navigation.navigate('Investimentos' as never)}
                     noDetectedInvestedValue
                 />
             </ScrollContainer>

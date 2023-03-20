@@ -22,6 +22,7 @@ interface InvestmentCardProps {
     total: string
     progress: number;
     noDetectedInvestedValue?: boolean;
+    onPress: () => void;
 }
 
 export function InvestmentCard({
@@ -31,13 +32,17 @@ export function InvestmentCard({
     renumbering,
     time,
     total,
-    noDetectedInvestedValue
+    noDetectedInvestedValue,
+    onPress
 }: InvestmentCardProps) {
 
     const progressPercentage = progress / 100
 
     return (
-        <Container>
+        <Container
+            onPress={onPress}
+            activeOpacity={0.8}
+        >
             <TitleContainer>
                 <Title>CCB AJX CARBON  INVESTIMENTO ${investmentPercentage}%</Title>
                 <SvgXml

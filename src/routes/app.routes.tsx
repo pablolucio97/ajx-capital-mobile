@@ -23,6 +23,7 @@ import {
 import { Notifications } from 'screens/Notifications'
 import { ContentDetails } from 'screens/ContentDetails'
 import { Favorites } from 'screens/Favorites'
+import { Investment } from 'screens/Investment'
 
 export function AppRoutes() {
 
@@ -126,6 +127,7 @@ export function AppRoutes() {
                 }}
             >
                 <StackNavigator.Screen name='Home' component={RenderTabsNavigation} />
+                <StackNavigator.Screen name='Investimentos' component={Investment} />
                 <StackNavigator.Screen name='Detalhes Perfil' component={Profile} />
                 <StackNavigator.Screen name='Meus Dados' component={MyData} />
                 <StackNavigator.Screen name='Notificações' component={Notifications} />
