@@ -1,10 +1,25 @@
+import { useNavigation } from '@react-navigation/native';
+import { leftArrowDark, logo } from '../../assets/svgs';
 import { InvestmentCard } from 'components/InvestmentCard';
 import { InvestmentResumeCard } from 'components/InvestmentResumeCard';
 import { RenumberingCard } from 'components/RenumberingCard';
+import { InvestmentGraphCard } from 'components/InvestmentGraphCard';
 import { StatusBar } from 'expo-status-bar';
-import { Container, ContentContainer } from './styles';
+import { SvgXml } from 'react-native-svg';
+import {
+    Button,
+    Container,
+    ContentContainer,
+    HeaderContainer,
+    LogoContainer,
+    Title,
+    TitleContainer
+} from './styles';
 
 export function Investment() {
+
+    const navigation = useNavigation()
+
     return (
         <Container>
             <StatusBar
@@ -13,10 +28,30 @@ export function Investment() {
             <ContentContainer
                 showsVerticalScrollIndicator={false}
             >
+                <HeaderContainer>
+                    <TitleContainer>
+                        <Button
+                            onPress={() => navigation.goBack()}
+                            activeOpacity={0.8}
+                        >
+                            <SvgXml
+                                xml={leftArrowDark}
+                            />
+                            <Title>CCB AJX CARBON  INVESTIMENTO 2%</Title>
+                        </Button>
+                    </TitleContainer>
+                    <LogoContainer>
+                        <SvgXml
+                            xml={logo}
+                            width={64}
+                        />
+                    </LogoContainer>
+                </HeaderContainer>
                 <RenumberingCard
                     accumulatedProfit='R$ 180,00'
                     totalValue='R$ 1.180,00'
                 />
+                <InvestmentGraphCard />
                 <InvestmentCard
                     contributedValue='R$ 564.000,00'
                     investmentPercentage={2}

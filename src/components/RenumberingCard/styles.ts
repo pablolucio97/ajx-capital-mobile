@@ -6,6 +6,7 @@ width: 98%;
 height: ${RFValue(112)}px;
 border-radius: ${RFValue(10)}px;
 padding: ${RFValue(24)}px;
+margin: ${RFValue(8)}px auto;
 background-color: ${({ theme }) => theme.colors.backgroundLight};
 elevation: 2;
 `

@@ -281,6 +281,74 @@ const arrowRightDark = `
 <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 7C0.447715 7 -4.47035e-07 7.44772 -4.47035e-07 8C-4.47035e-07 8.55228 0.447715 9 1 9V7ZM25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.29289L19.3431 0.928932C18.9526 0.538408 18.3195 0.538408 17.9289 0.928932C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM1 9L25 9V7L1 7V9Z" fill="black"/>
 </svg>
+`
+
+const verticalGraphMarks = `
+<svg width="10" height="178" viewBox="0 0 10 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 177L1 177" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 169L1 169" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 161L1 161" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 153L1 153" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 145L1 145" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 137L1 137" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 129L1 129" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 121L1 121" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 113L1 113" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 105L1 105" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 97L1 97" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 89L1 89" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 81L1 81" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 73L1 73" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 65L1 65" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 57L1 57" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 49L1 49" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 41L1 41" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 33L1 33" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 25L1 25" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 17L1 17" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 9L1 9" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 1L1 1" stroke="#D7D7D7" stroke-linecap="round"/>
+</svg>
+`
+
+const horizontalGraphMarks = `
+
+
+<svg width="297" height="10" viewBox="0 0 297 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 9L1 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M9 9L9 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M17 9L17 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M25 9L25 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M33 9L33 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M41 9L41 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M49 9L49 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M57 9L57 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M65 9L65 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M73 9L73 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M81 9L81 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M89 9L89 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M97 9L97 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M105 9L105 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M113 9L113 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M121 9L121 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M129 9L129 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M137 9L137 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M145 9L145 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M153 9L153 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M161 9L161 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M169 9L169 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M177 9L177 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M185 9L185 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M193 9L193 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M201 9L201 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M209 9L209 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M217 9L217 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M225 9L225 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M233 9L233 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M241 9L241 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M249 9L249 1" stroke="#D7D7D7" stroke-linecap="round"/>
+<path d="M257 9L257 1" stroke="#D7D7D7" stroke-linecap="round"/>
+</svg>
 
 `
 
@@ -314,5 +382,7 @@ export {
     playVideoIcon,
     favoritedIcon,
     leftArrowDark,
-    arrowRightDark
+    arrowRightDark,
+    verticalGraphMarks,
+    horizontalGraphMarks
 }
