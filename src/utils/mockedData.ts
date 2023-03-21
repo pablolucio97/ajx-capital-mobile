@@ -231,6 +231,16 @@ const favoritePodcastsList = [
     },
 ]
 
+const graphData = {
+    data: [0.4, 0.6, 0.8],
+    colors: ['rgba(58, 198, 244, .5)', 'rgba(118, 58, 244, .5)', 'rgba(56, 212, 98, .5)']
+};
+
+const selectGraphList = [
+    'último mês',
+    'últimos 2 meses',
+    'últimos 3 meses'
+]
 
 
 export {
@@ -247,5 +257,7 @@ export {
     newsImages,
     contentDetailBackgroundImage,
     podcastsList,
-    favoritePodcastsList
+    favoritePodcastsList,
+    graphData,
+    selectGraphList
 } 

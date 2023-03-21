@@ -15,6 +15,8 @@ import {
     Title,
     TitleContainer
 } from './styles';
+import { InvestmentsGroupCard } from 'components/InvestmentsGroupCard';
+import { graphData, selectGraphList } from 'utils/mockedData';
 
 export function Investment() {
 
@@ -67,6 +69,15 @@ export function Investment() {
                     paymentMethod='Boleto'
                     paymentStatus='Pago'
                     investmentValue='R$ 1.000,00'
+                />
+                {/* @ts-ignore */}
+                <InvestmentsGroupCard
+                    totalTimeInMonths={45}
+                    currentTimeInMonths={32}
+                    investment='R$ 1.000,00'
+                    renumbering='R$ 600,00'
+                    graphData={graphData}
+                    selectData={selectGraphList}
                 />
             </ContentContainer>
         </Container>

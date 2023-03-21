@@ -52,7 +52,7 @@ export function InvestmentGraphCard() {
             <GraphContainer>
                 <SvgXml
                     xml={verticalGraphMarks}
-                    style={{ marginRight: 8, marginTop: 16 }}
+                    style={{ marginRight: 8, marginTop: 12 }}
                 />
                 <LineChart
                     data={{
