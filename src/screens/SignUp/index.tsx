@@ -20,7 +20,7 @@ import {
     TouchableContainer
 } from './styles';
 import React, { useState } from 'react';
-import { Checkbox } from 'components/Checkbox';
+import { Checkbox } from 'components/CheckBox';
 
 export function SignUp() {
 
