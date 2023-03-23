@@ -22,6 +22,7 @@ export const Label = styled.Text`
   line-height: ${RFValue(16)};
   font-weight: 300;
   color: ${({ theme }) => theme.colors.textDark};
+  margin-left: ${RFValue(8)}px;
   margin-bottom: ${RFValue(8)}px;
 `;
 
