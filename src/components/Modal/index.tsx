@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
 import { Modalize } from 'react-native-modalize';
-import { Button, ButtonText, Description, Input, Label, Title } from './styles';
+import { Button, ButtonText, SubTitle, Input, Label, Title } from './styles';
 
 type ModalProps = {
   modalizeRef: React.RefObject<Modalize>;
@@ -23,12 +23,12 @@ export function Modal({ modalizeRef }: ModalProps) {
     >
       <View>
         <Title>Quanto você quer investir?</Title>
-        <Description>Maecenas at massa faucibus, pellentesque metus nec, pharetra nunc. </Description>
+        <SubTitle>Maecenas at massa faucibus, pellentesque metus nec, pharetra nunc. </SubTitle>
 
         <Label>Investimento</Label>
-        <Input />
+        <Input keyboardType="numeric" />
 
-        <Button activeOpacity={0.6} onPress={() => console.log('clicou')}>
+        <Button activeOpacity={0.6} onPress={() => console.log('clicked')}>
           <ButtonText>Investir</ButtonText>
         </Button>
       </View>
