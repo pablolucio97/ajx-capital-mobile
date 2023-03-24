@@ -1,11 +1,25 @@
+import { Checkbox } from 'components/CheckBox';
 import { Modal } from 'components/Modal';
 import React, { useRef, useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 import { SvgXml } from 'react-native-svg';
 import { arrowRightDark } from '../../assets/svgs';
-import { Button, CardContainer, Check, Input, Label, Link, LinkText, SubTitle, Terms, Title } from './styles';
-import { Checkbox } from 'components/CheckBox';
+import {
+  Button,
+  Buttons,
+  ButtonsContainer,
+  ButtonText,
+  CardContainer,
+  Check,
+  Input,
+  Label,
+  Link,
+  LinkText,
+  SubTitle,
+  Terms,
+  Title,
+} from './styles';
 
 export function Example() {
   const modalizeRef = useRef<Modalize>(null);
@@ -66,6 +80,27 @@ export function Example() {
         </Check>
       </CardContainer>
       {/* END OF TERMS OF USE SECTION */}
+
+      <View style={{ height: 40 }} />
+
+      {/* BUTTONS */}
+      <ButtonsContainer>
+        <Buttons variant="secondary">
+          <ButtonText variant="secondary">Voltar</ButtonText>
+        </Buttons>
+        <Buttons variant="primary">
+          <ButtonText variant="primary">Continuar</ButtonText>
+        </Buttons>
+      </ButtonsContainer>
+
+      <View style={{ height: 16 }} />
+
+      <Buttons variant="primary" disabled>
+        <ButtonText variant="primary">Continuar</ButtonText>
+      </Buttons>
+      {/* END BUTTONS */}
+
+      <View style={{ height: 40 }} />
 
       <Modal modalizeRef={modalizeRef} />
     </ScrollView>

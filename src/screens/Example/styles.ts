@@ -1,6 +1,10 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
+type ButtonProps = {
+  variant: string;
+};
+
 export const Button = styled.TouchableOpacity`
   background-color: #7159c1;
   padding: 10px 20px;
@@ -12,9 +16,10 @@ export const Button = styled.TouchableOpacity`
 export const CardContainer = styled.View`
   background-color: ${({ theme }) => theme.colors.backgroundLight};
   padding: ${RFValue(24)}px;
-  box-shadow: 0px 5px 4px rgba(233, 233, 233, 0.25);
+  box-shadow: 0px 5px 4px rgba(233, 233, 233, 0.5);
   border-radius: 10px;
   width: 100%;
+  elevation: 10;
 `;
 
 export const Title = styled.Text`
@@ -86,3 +91,32 @@ export const Terms = styled.Text`
   margin-left: ${RFValue(16)}px;
 `;
 // END OF COMPONENTS OF TERMS OF USE
+
+// BUTTONS
+export const ButtonsContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+`;
+
+export const Buttons = styled.TouchableOpacity<ButtonProps>`
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 32px;
+  background-color: ${({ theme, variant, disabled }) =>
+    disabled ? '#dadada' : variant === 'primary' ? theme.colors.primary : 'transparent'};
+  border: 0.5px solid ${({ theme, disabled }) => (disabled ? '#dadada' : theme.colors.primary)};
+  border-radius: 10px;
+`;
+
+export const ButtonText = styled.Text<ButtonProps>`
+  font-size: ${RFValue(14)}px;
+  line-height: ${RFValue(18)};
+  font-weight: 700;
+  text-align: center;
+  color: ${({ theme, variant }) => (variant === 'secondary' ? theme.colors.primary : theme.colors.textLight)};
+`;
+// END BUTTONS
