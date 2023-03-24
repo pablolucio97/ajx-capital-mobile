@@ -1,18 +1,22 @@
 import { Checkbox } from 'components/CheckBox';
 import { Modal } from 'components/Modal';
 import { RadioButton } from 'components/RadioButton';
+import { setStringAsync } from 'expo-clipboard';
 import React, { useRef, useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, View, ToastAndroid } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 import { SvgXml } from 'react-native-svg';
 import { arrowRightDark, boleto as boletoIcon, pix as pixIcon } from '../../assets/svgs';
 import {
+  BarsCode,
+  BarsCodeContainer,
   Button,
   Buttons,
   ButtonsContainer,
   ButtonText,
   CardContainer,
   Check,
+  CopyCode,
   Gap,
   Input,
   Label,
@@ -38,6 +42,11 @@ export function Example() {
     console.log('add async to function');
     // await Linking.openURL('https://www.google.com/');
   }
+
+  const copyToClipboard = async () => {
+    await setStringAsync('00190000090312855700045208637178892700000100000');
+    return ToastAndroid.show('Successfully copied!', ToastAndroid.SHORT);
+  };
 
   return (
     <ScrollView
@@ -129,7 +138,7 @@ export function Example() {
       <View style={{ height: 40 }} />
 
       {/* RADIO BUTTONS */}
-      <RadioContainer onPress={() => [setBoletoChecked(!boletoChecked), setPixChecked(false)]}>
+      <RadioContainer onPress={() => [setBoletoChecked(true), setPixChecked(false)]}>
         <RadioButton checked={boletoChecked} />
         <SvgXml xml={boletoIcon} style={{ marginRight: 16 }} />
         <LinkText>Boleto</LinkText>
@@ -137,12 +146,38 @@ export function Example() {
 
       <View style={{ height: 16 }} />
 
-      <RadioContainer onPress={() => [setPixChecked(!pixChecked), setBoletoChecked(false)]}>
+      <RadioContainer onPress={() => [setPixChecked(true), setBoletoChecked(false)]}>
         <RadioButton checked={pixChecked} />
         <SvgXml xml={pixIcon} style={{ marginRight: 16 }} />
         <LinkText>Pix</LinkText>
       </RadioContainer>
       {/* END OF RADIO BUTTONS */}
+
+      <View style={{ height: 40 }} />
+
+      {/* INVESTMENT THANKS */}
+      <CardContainer>
+        <Title>Obrigado pelo seu Aporte!</Title>
+        <SubTitle>
+          Pague o boleto agora ou até a data do vencimento para confirmar seu aporte.
+          {'\n'}
+          {'\n'}
+          Clique em Copiar código de barras, abra o aplicativo do seu banco e efetue o pagamento.
+        </SubTitle>
+
+        <Link disabled>
+          <LinkText style={{ color: '#38D462' }}>Valor</LinkText>
+          <LinkText style={{ color: '#38D462' }}>R$ 1.000,00</LinkText>
+        </Link>
+
+        <BarsCodeContainer onPress={copyToClipboard}>
+          <BarsCode>00190000090312855700045208637178892700000100000</BarsCode>
+          <CopyCode>Copiar Código de Barras</CopyCode>
+        </BarsCodeContainer>
+
+        <SubTitle style={{ marginBottom: 0 }}>Também enviamos estas informações para seu e-mail.</SubTitle>
+      </CardContainer>
+      {/* ENND OF INVESTMENT THANKS */}
 
       <Modal modalizeRef={modalizeRef} />
     </ScrollView>

@@ -129,6 +129,7 @@ export const ButtonText = styled.Text<ButtonProps>`
 `;
 // END BUTTONS
 
+// RADIO BUTTON
 export const RadioContainer = styled.Pressable`
   flex-direction: row;
   align-items: center;
@@ -139,3 +140,30 @@ export const RadioContainer = styled.Pressable`
   width: 100%;
   elevation: 10;
 `;
+// RADIO BUTTON
+
+// BARS CODE SECTION
+export const BarsCodeContainer = styled.TouchableOpacity`
+  background-color: ${({ theme }) => theme.colors.primary};
+  border: 0.5px solid ${({ theme }) => theme.colors.borders};
+  border-radius: 10px;
+  padding: 18px 24px 24px;
+  margin: 24px 0 16px;
+`;
+
+export const BarsCode = styled.Text`
+  font-size: ${RFValue(14)}px;
+  line-height: ${RFValue(18)};
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.textLight};
+`;
+
+export const CopyCode = styled.Text`
+  font-size: ${RFValue(14)}px;
+  line-height: ${RFValue(18)};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.textLight};
+  text-align: center;
+  margin-top: 16px;
+`;
+// END OF BARS CODE SECTION
