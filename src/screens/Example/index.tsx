@@ -12,6 +12,7 @@ import {
   ButtonText,
   CardContainer,
   Check,
+  Gap,
   Input,
   Label,
   Link,
@@ -65,14 +66,16 @@ export function Example() {
         <Title>Termos de uso e termo de adesão e Ciência de Riscos</Title>
         <SubTitle>Maecenas at massa faucibus, pellentesque metus nec, pharetra nunc. </SubTitle>
 
-        <Link onPress={handleNavigation}>
-          <LinkText>Contrato CCB</LinkText>
-          <SvgXml xml={arrowRightDark} />
-        </Link>
-        <Link onPress={handleNavigation}>
-          <LinkText>Termo de Ciência de Risco</LinkText>
-          <SvgXml xml={arrowRightDark} />
-        </Link>
+        <Gap>
+          <Link onPress={handleNavigation}>
+            <LinkText>Contrato CCB</LinkText>
+            <SvgXml xml={arrowRightDark} />
+          </Link>
+          <Link onPress={handleNavigation}>
+            <LinkText>Termo de Ciência de Risco</LinkText>
+            <SvgXml xml={arrowRightDark} />
+          </Link>
+        </Gap>
 
         <Check>
           <Checkbox onValueChange={setTermsChecked} value={termsChecked} />
@@ -102,6 +105,22 @@ export function Example() {
 
       <View style={{ height: 40 }} />
 
+      {/* INVESTMENT RESUME SECTION */}
+      <CardContainer>
+        <Title>Resumo de Investimento</Title>
+
+        <Gap>
+          <Link>
+            <LinkText bold>CCB AJX CARBON INVESTIMENTO 2%</LinkText>
+          </Link>
+
+          <Link>
+            <LinkText>Valor</LinkText>
+            <LinkText>R$ 1.000,00</LinkText>
+          </Link>
+        </Gap>
+      </CardContainer>
+      {/* END OF INVESTMENT RESUME SECTION */}
       <Modal modalizeRef={modalizeRef} />
     </ScrollView>
   );

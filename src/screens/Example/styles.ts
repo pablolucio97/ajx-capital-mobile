@@ -1,6 +1,10 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
+type LinkTextProps = {
+  bold?: boolean;
+};
+
 type ButtonProps = {
   variant: string;
 };
@@ -57,6 +61,11 @@ export const Input = styled.TextInput`
 `;
 // END OF INVESTMENT SECTION
 
+export const Gap = styled.View`
+  gap: 24px;
+  margin-top: 8px;
+`;
+
 // COMPONENTS OF TERMS OF USE
 export const Link = styled.TouchableOpacity`
   flex-direction: row;
@@ -66,20 +75,19 @@ export const Link = styled.TouchableOpacity`
   border: 0.5px solid ${({ theme }) => theme.colors.borders};
   border-radius: 10px;
   padding: 18px 24px;
-  margin: 8px 0 12px;
 `;
 
-export const LinkText = styled.Text`
+export const LinkText = styled.Text<LinkTextProps>`
   font-size: ${RFValue(14)}px;
   line-height: ${RFValue(18)};
-  font-weight: 600;
+  font-weight: ${({ bold }) => (bold ? 700 : 600)};
   color: ${({ theme }) => theme.colors.titleDark};
 `;
 
 export const Check = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-top: ${RFValue(32)}px;
+  margin-top: ${RFValue(40)}px;
 `;
 
 export const Terms = styled.Text`
