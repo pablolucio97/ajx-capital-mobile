@@ -128,3 +128,14 @@ export const ButtonText = styled.Text<ButtonProps>`
   color: ${({ theme, variant }) => (variant === 'secondary' ? theme.colors.primary : theme.colors.textLight)};
 `;
 // END BUTTONS
+
+export const RadioContainer = styled.Pressable`
+  flex-direction: row;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.backgroundLight};
+  padding: 20px 24px;
+  box-shadow: 0px 5px 4px rgba(233, 233, 233, 0.5);
+  border-radius: 10px;
+  width: 100%;
+  elevation: 10;
+`;

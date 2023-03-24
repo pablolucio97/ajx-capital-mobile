@@ -1,10 +1,11 @@
 import { Checkbox } from 'components/CheckBox';
 import { Modal } from 'components/Modal';
+import { RadioButton } from 'components/RadioButton';
 import React, { useRef, useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 import { SvgXml } from 'react-native-svg';
-import { arrowRightDark } from '../../assets/svgs';
+import { arrowRightDark, boleto as boletoIcon, pix as pixIcon } from '../../assets/svgs';
 import {
   Button,
   Buttons,
@@ -17,6 +18,7 @@ import {
   Label,
   Link,
   LinkText,
+  RadioContainer,
   SubTitle,
   Terms,
   Title,
@@ -25,6 +27,8 @@ import {
 export function Example() {
   const modalizeRef = useRef<Modalize>(null);
   const [termsChecked, setTermsChecked] = useState(false);
+  const [boletoChecked, setBoletoChecked] = useState(false);
+  const [pixChecked, setPixChecked] = useState(false);
 
   const onOpen = () => {
     modalizeRef.current?.open();
@@ -110,17 +114,36 @@ export function Example() {
         <Title>Resumo de Investimento</Title>
 
         <Gap>
-          <Link>
+          <Link disabled>
             <LinkText bold>CCB AJX CARBON INVESTIMENTO 2%</LinkText>
           </Link>
 
-          <Link>
+          <Link disabled>
             <LinkText>Valor</LinkText>
             <LinkText>R$ 1.000,00</LinkText>
           </Link>
         </Gap>
       </CardContainer>
       {/* END OF INVESTMENT RESUME SECTION */}
+
+      <View style={{ height: 40 }} />
+
+      {/* RADIO BUTTONS */}
+      <RadioContainer onPress={() => [setBoletoChecked(!boletoChecked), setPixChecked(false)]}>
+        <RadioButton checked={boletoChecked} />
+        <SvgXml xml={boletoIcon} style={{ marginRight: 16 }} />
+        <LinkText>Boleto</LinkText>
+      </RadioContainer>
+
+      <View style={{ height: 16 }} />
+
+      <RadioContainer onPress={() => [setPixChecked(!pixChecked), setBoletoChecked(false)]}>
+        <RadioButton checked={pixChecked} />
+        <SvgXml xml={pixIcon} style={{ marginRight: 16 }} />
+        <LinkText>Pix</LinkText>
+      </RadioContainer>
+      {/* END OF RADIO BUTTONS */}
+
       <Modal modalizeRef={modalizeRef} />
     </ScrollView>
   );
