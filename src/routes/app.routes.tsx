@@ -24,6 +24,7 @@ import { Notifications } from 'screens/Notifications'
 import { ContentDetails } from 'screens/ContentDetails'
 import { Favorites } from 'screens/Favorites'
 import { Investment } from 'screens/Investment'
+import { Example } from 'screens/Example'
 
 export function AppRoutes() {
 
@@ -49,7 +50,7 @@ export function AppRoutes() {
     const screens = [
         {
             name: 'Home',
-            component: Home,
+            component: Example,
             options: screensConfig
         },
         {

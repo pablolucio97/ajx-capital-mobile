@@ -1,4 +1,4 @@
-import { Checkbox } from 'components/Checkbox';
+import { Checkbox } from 'components/CheckBox';
 import { InputMaskText } from 'components/InputMaskText';
 import { SelectPicker } from 'components/SelectPicker';
 import React, { Dispatch, SetStateAction } from 'react';

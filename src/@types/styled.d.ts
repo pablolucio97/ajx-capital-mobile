@@ -8,6 +8,7 @@ declare module 'styled-components' {
       secondary: string;
       titleDark: string,
       subtitleDark: string,
+      subtitle: subtitle,
       textDark: string,
       titleLight: string,
       subtitleLight: string,
@@ -15,6 +16,8 @@ declare module 'styled-components' {
       placeholder: string;
       background: string;
       backgroundLight: string;
+      inputs: string;
+      borders: string;
       success: string;
       error: string;
     };
